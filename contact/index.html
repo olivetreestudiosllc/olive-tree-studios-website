@@ -5,16 +5,16 @@
         <title>Olive Tree Studios</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="site-images/tab-icon.png">
+        <link rel="icon" href="../site-images/tab-icon.png">
 
 
         <!-- PAGE SPECIFIC CUSTOM CSS/JS DOC LINKING -->
-        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="contact.css">
 
 
         <!-- SITEWIDE CUSTOM CSS/JS DOC LINKING -->
-        <link rel="stylesheet" href="site-css/main.css">
-        <script src="site-js/main.js"></script>
+        <link rel="stylesheet" href="../site-css/main.css">
+        <script src="../site-js/main.js"></script>
 
 
         <!-- BOOTSTRAP CSS/JS LINKING -->
@@ -26,8 +26,8 @@
 
         <!-- EMBED INFO -->
         <meta content="olivetreestudios.org" property="og:site_name">
-        <meta content="Home - Olive Tree Studios" property="og:title">
-        <meta content="Olive Tree Studios is a newly established independent American animation studio specializing in 3D productions." property="og:description">
+        <meta content="Contact - Olive Tree Studios" property="og:title">
+        <meta content="Reach out to Olive Tree Studios to speak with one of our respondents." property="og:description">
         <meta name="theme-color" content="#33cc33">
         <meta name="msapplication-TileImage" content="https://olivetreestudios.org/site-images/embed-icon.png">
         <meta property="og:image" content="https://olivetreestudios.org/site-images/embed-icon.png">
@@ -61,29 +61,44 @@
         <!-- hide this with CSS, include more info here. H1 tags are important for browsers to tell what the website is about. include searchable keywords. -->
         <h1>Olive Tree Studios</h1>
 
-        <h2>Olive Avenue</h2>
-        <p>Set in a suburban Pennsylvania town, Olive Avenue follows teens/young adults Roy Strofferson and Nate Riley on their journey through everything that the late 2010's and early 2020's has to offer. Too young to be a 90's baby, too old to amused by Gen-Z brainrot, this modern animated take on the humor found in King of the Hill and Seinfield is nothing but ordinary.</p>
-
-        <!-- call to action -->
-        <h2>Who are we?</h2>
-        <p>Blender may be free, but making ideas happen is not!</p>
-        <p>
-            We are a fledgling independent studio with one simple goal. Empowering those with ideas by providing the resources and structure to make them happen. Ideas are easy to come up with, hard to actually get them made.
+        <h2>Contact Us</h2>
+            <form action="submit-function.php">
+            <label for="first-name">First name*</label>
             <br>
-            Starting with Olive Avenue as our flagship series, we're taking a massive step at laying a foundation for us to support that goal. Olive Tree Studios is made possible by independent commissioned collaborators across the globe, working together to make Olive Avenue and beyond a reality. Every commissioned contributor building things from the ground up, pouring their hearts into making our productions special.
-        </p>
+            <input type="text" id="first-name" name="first-name" value="">
+            <br>
+            
+            <label for="last-name">Last name*</label>
+            <br>
+            <input type="text" id="last-name" name="last-name" value="">
+            <br>
+            
+            <label for="email">Email*</label>
+            <br>
+            <input type="text" id="email" name="email" value="">
+            <br>
+
+            <label for="subject">Subject*</label>
+            <br>
+            <input type="text" id="subject" name="subject" value="">
+            <br>
+
+            <label for="email">Leave your message for us here*</label>
+            <br>
+            <input type="text" id="message" name="message" value="">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            </form> 
         
-        <!-- directory... (deep dive) section -->
-        <h2>Where to see?</h2>
-        <p>Watch our productions free of charge on YouTube! Or, alternatively, we welcome the support on our Patreon page, which not only provides awesome exclusive benefits, but also allows for extended or unmodified versions of our productions too.</p>
-
-        <h2>Our Contributors</h2>
-        <p>Our productions are only possible from the work of our immensely talented contributors. See all who's helping out, see their work, and connect with them.</p>
-        <button><a href="https://olivetreestudios.org/contributors">Meet our Contributors</a></button>
-
-        <h2>Become an OTS Contributor</h2>
-        <p>Interested in becoming an Olive Tree Studios commissioned independent contributor to help with our productions? Check out if this would be a right fit for you!</p>
-        <button><a href="https://olivetreestudios.org/opportunities">See More</a></button>
+        <h2>Pitch Inqueries</h2>
+        <p>Looking to pitch your idea to us?</p>
+        
+        <p>Fill out the below form to request information from our studio. A studio respondent will then provide you with information on the pitch process. This includes requirements such as initial funding, an established team, and other important details.</p>
+        <button><a href="#">Request Information</a></button>
+        
+        <p>See our offered benefits for onboarded productions.</p>
+        <button><a href="#">Read More</a></button>
 
         <footer>
             <!-- banner part of footer -->
