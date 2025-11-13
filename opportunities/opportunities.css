@@ -1,6 +1,53 @@
-/* OPPORTUNITIES CSS DOC */
+/* ===== CONTRIBUTOR NEEDS GRID ===== */
+.contributor-needs {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.2rem 2rem;
+    padding: 0;
+    margin: 2.5rem 0;
+}
 
-/* use for custom CSS classes on specific page */
+.contributor-needs li {
+    background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+    border-left: 5px solid #33cc33;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #f0f0f0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
 
-/* ------------------------------------------- */
+.contributor-needs li::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(51, 204, 51, 0.05);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
 
+.contributor-needs li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: #66ff66;
+    background: linear-gradient(145deg, #2f2f2f, #4a4a4a);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .contributor-needs {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .contributor-needs li {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+}

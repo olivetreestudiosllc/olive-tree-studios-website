@@ -1,113 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- BASIC INFO / LOOK TAGS -->
-        <title>Olive Tree Studios</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../site-images/tab-icon.png">
+<head>
+    <!-- BASIC INFO / LOOK TAGS -->
+    <title>About - Olive Tree Studios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../site-images/tab-icon.png">
 
+    <!-- PAGE SPECIFIC CSS -->
+    <link rel="stylesheet" href="about.css">
 
-        <!-- PAGE SPECIFIC CUSTOM CSS/JS DOC LINKING -->
-        <link rel="stylesheet" href="about.css">
+    <!-- SITEWIDE CSS -->
+    <link rel="stylesheet" href="../site-css/main.css">
 
+    <!-- BOOTSTRAP / FONTS / FONT AWESOME -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-y7bM8ZGb3Q4NRTrblz1xjkGn3Ww0n+Kav4MFmNnP/0e6SUp9kFRCqvfVv+4kT9GVFhT0VZ9oPp/FD+y4dxdJkA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- SITEWIDE CUSTOM CSS/JS DOC LINKING -->
-        <link rel="stylesheet" href="../site-css/main.css">
-        <script src="../site-js/main.js"></script>
+    <style>
+        .heebo-regular {
+            font-family: "Heebo", sans-serif;
+            font-weight: 400;
+        }
+        /* Optional: spacing for About page sections */
+        .body-padding { padding: 3rem 1rem; }
+        .hero-block { max-width: 900px; margin: 0 auto; }
+        .olive-bold { font-weight: 700; color: #33cc33; }
+    </style>
+</head>
+<body class="bg-dark text-light heebo-regular">
 
-
-        <!-- BOOTSTRAP CSS/JS LINKING -->
-        <!-- <link href="site-css/bootstrap-4.4.1.css" rel="stylesheet">
-        <script src="site-js/jquery-3.4.1.min.js"></script>
-        <script src="site-js/popper.min.js"></script> 
-        <script src="site-js/bootstrap-4.4.1.js"></script> -->
-
-
-        <!-- EMBED INFO -->
-        <meta content="olivetreestudios.org" property="og:site_name">
-        <meta content="About - Olive Tree Studios" property="og:title">
-        <meta content="Learn about who we, Olive Tree Studios, are and what we do." property="og:description">
-        <meta name="theme-color" content="#33cc33">
-        <meta name="msapplication-TileImage" content="https://olivetreestudios.org/site-images/embed-icon.png">
-        <meta property="og:image" content="https://olivetreestudios.org/site-images/embed-icon.png">
-        <meta property="og:image:width" content="500">
-        <meta property="og:image:height" content="500">
-
-
-        <!-- misc head tags / linking -->
-
-    </head>
-
-    <body>
-        <header>
-            <div>
-                <!-- div for image logo -->
+    <!-- HEADER -->
+    <header class="header-formatting">
+        <div class="header-logo-formatting">
+            <a href="https://olivetreestudios.org">
+                <img src="../site-images/embed-icon.png" alt="Olive Tree Studios logo" class="header-img-formatting image-hover">
+            </a>
+        </div>
+        <nav class="navbar-block">
+            <div class="navbar-block-formatting">
+                <div class="navbar-text-spacing"><a class="navbar-text" href="https://olivetreestudios.org/our-productions">Our Shows</a></div>
+                <div class="navbar-text-spacing"><a class="navbar-text" href="https://olivetreestudios.org/our-productions/olive-avenue">Olive Avenue</a></div>
+                <div class="navbar-text-spacing"><a class="navbar-text" href="https://olivetreestudios.org/contributors">Our Contributors</a></div>
+                <div class="navbar-text-spacing"><a class="navbar-text" href="https://olivetreestudios.org/opportunities">Opportunities</a></div>
+                <div class="navbar-text-spacing"><a class="navbar-text" href="https://olivetreestudios.org/about">About</a></div>
+                <div class="navbar-text-spacing"><a class="navbar-text" href="https://olivetreestudios.org/contact">Contact</a></div>
+                <div class="navbar-text-spacing"><a class="navbar-text" href="https://olivetreestudios.org/links">Links</a></div>
             </div>
+        </nav>
+    </header>
 
-            <nav>
-                <!-- dropdown -->
-                <a href="https://olivetreestudios.org/our-productions">Our Shows</a>
-                <a href="https://olivetreestudios.org/our-productions/olive-avenue">Olive Avenue</a>
 
-                <a href="https://olivetreestudios.org/contributors">Our Contributors</a>
-                <a href="https://olivetreestudios.org/opportunities">Opportunities</a>
-                <a href="https://olivetreestudios.org/about">About</a>
-                <a href="https://olivetreestudios.org/contact">Contact</a>
-                <a href="https://olivetreestudios.org/links">Links</a>
-            </nav>
-        </header>
+    <!-- ABOUT CONTENT -->
+    <section class="body-padding">
+        <div class="hero-block">
+            <h1 class="olive-bold">Olive Tree Studios</h1>
 
-        <!-- hide this with CSS, include more info here. H1 tags are important for browsers to tell what the website is about. include searchable keywords. -->
-        <h1>Olive Tree Studios</h1>
+            <p>
+                Founded in May of 2025 by <a href="https://bluecolty.com" class="navbar-text">Bluecolty</a>, this ragtag fledgling studio is still just beginning to properly write its “About”.
+            </p>
+            <p>
+                Registered to a quiet little property in Arkansas, owned by the founder, our studio started with the simple goal of empowering those with good ideas, bringing resources and scalability to productions that would otherwise not get started.
+            </p>
+            <p>
+                That's who we want to be anyways. To do that, we have to get started somewhere. Olive Avenue (<a href="https://olive-avenue.net" class="navbar-text">https://olive-avenue.net</a>) is the vessel actively pushing that goal forward. We're not much, but there's one thing that us and our contributors do have — motivation. Whether that be motivation of turning dreams true, or working against the monopolistic systems of established studios. Or just plain wanting to make something cool and having fun while doing it. Whatever the reason is, we're here to make a difference.
+            </p>
 
-        <p>
-            Founded in May of 2025 by <a href="https://bluecolty.com">Bluecolty</a>, this ragtag fledgling studio is still just beginning to properly write its “About”.
-            <br>
-            <br>
-            Registered to a quiet little property in Arkansas, owned by the founder, our studio started with the simple goal of empowering those with good ideas, bringing resources and scalability to productions that would otherwise not get started.
-            <br>
-            <br>
-            That's who we want to be anyways. To do that, we have to get started somewhere. Olive Avenue (link - https://olive-avenue.net) is the vessel actively pushing that goal forward. We're not much, but there's one thing that us and our contributors do have - motivation. Whether that be motivation of turning dreams true, or working against the monopolistic systems of established studios. Or just plain wanting to make something cool and having fun while doing it. Whatever the reason is, we're here to make a difference.
-        </p>
+            <h2 class="olive-bold">Why "Olive Tree"?</h2>
+            <p>
+                Many reasons. Our logo is born not only from the very nature of vertices and edges in 3D, but also of nodes. Nodes being connected. Our vision is to serve as the central hub for future productions, with all of our productions representing the nodes that make up the larger structure. Unique productions, under one roof.
+            </p>
+            <p>
+                The inclusion of the olive tree comes from 2 distinct areas. The first area comes from what olive trees represent in the Bible. The olive tree represents peace, life, and prosperity. The commonly known symbol of peace — a dove with an olive tree branch! The world certainly isn't getting more peaceful, and while we certainly aren't out to bring world peace, we hope to bring just a bit of an escape for people with our little studio's productions.
+            </p>
+            <p>
+                The second area comes from the importance of olive trees throughout human history. Olive trees have long been a source of prosperity. They produce, shockingly, olives and olive oil. Both used almost globally. Back in old times, olive oil was almost as valuable as gold. Nations with olive trees grew prosperous. So if we want to help creatives with a vision bring their productions to life… why not throw some olives at them?
+            </p>
 
-        <h2>Why "Olive Tree"?</h2>
-        <p>
-            Many reasons. Our logo is born not only from the very nature of vertices and edges in 3D, but also of nodes. Nodes being connected. Our vision is to serve as the central hub for future productions, with all of our productions representing the nodes that make up the larger structure. Unique productions, under one roof.
-            <br>
-            <br>
-            The inclusion of the olive tree comes from 2 distinct areas. The first area comes from what olive trees represent in the Bible. The olive tree represents peace, life, and prosperity. The commonly known symbol of peace- a dove with… an olive tree branch! The world certainly isn't getting more peaceful, and while we certainly aren't out to bring world peace, we hope to bring just a bit of an escape for people with our little studio's productions.
-            <br>
-            <br>
-            The second area comes from the importance of olive trees throughout human history. Olive trees have long been a source of prosperity. They produce, shockingly, olives and olive oil. Both used almost globally. Back in old times, olive oil was almost as valuable as gold. Nations with olive trees grew prosperous. So if we want to help creatives with a vision bring their productions to life… why not throw some olives at them?
-        </p>
+            <h2 class="olive-bold">Our Contributors</h2>
+            <p>
+                Olive Tree Studios, LLC is made up of many independent commissioned contributors who pour nothing but the most love and dedication into our productions. From writers, to storyboarders, to 3D artists, Olive Tree Studios already features a huge gamut of talent. Regardless of someone's fine contribution, everyone shares one simple thing — a passion to make some darn cool stuff.
+            </p>
+        </div>
+    </section>
 
-        <h2>Our Contributors</h2>
-        <p>
-            Olive Tree Studios, LLC is made up of many independent commissioned contributors who pour nothing but the most love and dedication into our productions. From writers, to storyboarders, to 3D artists, Olive Tree Studios already features a huge gamut of talent. Regardless of someone's fine contribution, everyone shares one simple thing. A passion to make some darn cool stuff.
-        </p>
 
-        <footer>
-            <!-- banner part of footer -->
-            <section>
-                <a href="https://www.youtube.com/@olivetreestudiosllc"></a>
-                <a href="https://bsky.app/profile/olivetreestudios.bsky.social"></a>
-                <a href="https://www.tumblr.com/olivetreestudios"></a>
-                <a href="https://www.reddit.com/r/oliveavenue/"></a>
-                <a href="https://www.patreon.com/c/olivetreestudios"></a>
-            </section>
+    <!-- FOOTER (INFO) -->
+    <footer class="bottomfooter-base">
+        <img src="/site-images/embed-icon.png" alt="Olive Tree Studios logo">
+        <div class="footer-div" style="padding-bottom: 2rem;">
+            <a href="https://olivetreestudios.org/about" class="footer-links">About Us</a>
+            <a href="https://olivetreestudios.org/links" class="footer-links">Our Links</a>
+            <a href="https://olivetreestudios.org/contact" class="footer-links">Contact Us</a>
+        </div>
+        <span>&copy; 2026 Olive Tree Studios, LLC</span><br>
+        <p class="footer-text olive-regular">Website designed and built by Olive Tree Studios Contributors. Hosted on GitHub Pages.</p>
+    </footer>
 
-            <!-- solid part of footer -->
-            <section>
-                <!-- studio logo -->
-                <img href="">
-                <a href="https://olivetreestudios.org/about">About Us</a>
-                <a href="https://olivetreestudios.org/links">Our Links</a>
-                <a href="https://olivetreestudios.org/contact">Contact Us</a>
-
-                <p>© 2026 Olive Tree Studios, LLC</p>
-                <p>Website designed and built by Olive Tree Studios Contributors. Hosted on GitHub Pages.</p>
-            </section>
-        </footer>
-    </body>
+    <!-- JS / SLICK INIT -->
+    <script type="text/javascript" src="site-js/jquery.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="site-js/slick-init.js"></script>
+</body>
 </html>

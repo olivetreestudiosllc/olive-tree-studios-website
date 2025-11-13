@@ -1,0 +1,334 @@
+/* ------------------------------ */
+/* FONT IMPORTS */
+@font-face {
+    font-family: "olive-bold";
+    font-weight: bold;
+    src: url("../fonts/antique-olive-bold.woff") format('woff');
+}
+.olive-bold {
+    font-family: "olive-bold", sans-serif;
+}
+
+@font-face {
+    font-family: "olive-regular";
+    src: url("../fonts/antique-olive-regular.woff") format('woff');
+}
+.olive-regular {
+    font-family: "olive-regular", sans-serif;
+}
+
+/* ------------------------------ */
+/* BASE FORMATTING */
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+body {
+    margin: 0;
+    line-height: inherit;
+    background-color: #0b0b0b;
+    color: #fff;
+}
+p {
+    font-size: 14pt;
+}
+
+
+/* ------------------------------ */
+/* HEADER */
+/* ===== HEADER FIX FOR PAGE TITLE ===== */
+header.header-formatting {
+    position: fixed;   /* keeps header at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Add spacing to main content so it doesn't go under the header */
+body > section.body-padding,
+body > section.extra-body-padding,
+body > section {
+    margin-top: calc(80px + 1rem); /* 80px = approximate header height; 1rem = optional extra spacing */
+}
+
+/* Responsive adjustment for mobile if header grows taller */
+@media (max-width: 768px) {
+    body > section.body-padding,
+    body > section.extra-body-padding,
+    body > section {
+        margin-top: calc(120px + 1rem); /* increase if header wraps/height grows */
+    }
+}
+.header-formatting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: rgba(10, 25, 10, 0.85);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+.header-logo-formatting {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.header-img-formatting {
+    width: 16.7rem;
+    cursor: pointer;
+}
+
+/* Header logo size */
+.header-logo-formatting img {
+    width: 200px;
+    height: 60px;
+    object-fit: contain; 
+}
+
+/* ------------------------------ */
+/* NAVBAR */
+.navbar-block {
+    display: flex;
+    gap: 1rem;
+}
+.navbar-block-formatting {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px;
+}
+.navbar-text {
+    color: white;
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: transform 200ms, color 200ms;
+    font-family: "olive-regular", sans-serif;
+}
+.navbar-text:hover {
+    color: rgb(71, 149, 90);
+    transform: translateY(-1px);
+}
+
+/* ------------------------------ */
+/* HERO SECTION */
+.header-image-container {
+    height: calc(8rem + 100vh);
+    background-image: url("https://www.motortrend.com/uploads/2022/11/2023-Mini-Cooper-SE-11.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.header-image-space {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(10, 25, 10, 0.5),
+        rgba(0, 0, 0, 0.7)
+    );
+    mix-blend-mode: overlay;
+    z-index: 2;
+}
+.hero-text-container {
+    width: 40%;
+    margin-top: -12rem;
+    position: absolute;
+    left: 10vw;
+    z-index: 3;
+    filter: drop-shadow(rgba(6, 120, 60, 0.4) 0px 0px 10px)
+            drop-shadow(rgba(0, 0, 0, 0.4) 0px 2px 4px);
+}
+.hero-text-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-family: "olive-bold", sans-serif;
+}
+.hero-text-subtitle {
+    font-size: 1.5rem;
+    font-family: "olive-regular", sans-serif;
+}
+
+/* ------------------------------ */
+/* BODY / SECTION STYLING */
+.body-padding {
+    padding-inline: 4rem;
+}
+.extra-body-padding {
+    padding-inline: 12rem;
+}
+.section-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 64px;
+    margin-block: 2rem;
+    gap: 2rem;
+}
+.hero-block {
+    text-align: center;
+    padding-block: 64px;
+}
+.text-container {
+    max-width: 50%;
+    padding-inline: 2.5rem;
+}
+.image-container {
+    max-width: 50%;
+    padding-inline: 2.5rem;
+}
+.image-hover {
+    transition: transform 0.2s ease;
+}
+.image-hover:hover {
+    transform: scale(1.05);
+}
+.hr-class {
+    width: 80%;
+    margin: auto;
+    border: 0;
+    border-top: 1px solid #3a3a3a;
+}
+
+/* ------------------------------ */
+/* BUTTONS */
+.a-tag-button {
+    font-family: "olive-regular", sans-serif;
+    background-color: #fff;
+    color: #000;
+    border-radius: 6rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    display: inline-block;
+    transition: transform 200ms, background-color 200ms;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+.a-tag-button:hover {
+    background-color: rgb(133, 179, 153);
+    transform: translateY(-5px);
+}
+
+/* ------------------------------ */
+/* FOOTERS */
+.topfooter-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    margin-block: 2rem;
+    background: linear-gradient(
+        to top,
+        rgba(5, 20, 5, 1) 0%,
+        rgba(15, 30, 15, 0.85) 60%,
+        rgba(25, 50, 25, 0.7) 100%
+    ), 
+    url("../sitewide-images/footer-bg.png") center/cover;
+}
+.bottomfooter-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    color: white;
+    background: linear-gradient(
+        to bottom,
+        rgb(20, 50, 20) 0%,
+        rgb(5, 10, 5) 100%
+    );
+    font-size: 0.8rem;
+}
+.bottomfooter-base img {
+    width: 13rem;
+    margin-block: 1rem;
+}
+.footer-icons {
+    display: flex;
+    gap: 2rem;
+    margin-block: 1rem;
+    border-top: 1px solid rgb(160, 174, 192);
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+.a-formatting {
+    color: #fff;
+    transition: margin-top 200ms, color 200ms;
+    filter: drop-shadow(rgba(6, 120, 60, 0.4) 0px 0px 10px)
+            drop-shadow(rgba(0, 0, 0, 0.4) 0px 2px 4px);
+}
+.a-formatting:hover {
+    color: rgb(153, 179, 153);
+    margin-top: -10px;
+}
+.footer-links {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding-inline: 1rem;
+    transition: color 200ms, transform 200ms;
+    font-family: "olive-regular", sans-serif;
+}
+.footer-links:hover {
+    color: rgb(133, 179, 153);
+    transform: translateY(-2px);
+}
+.footer-text {
+    font-size: 0.9rem;
+}
+
+/* ------------------------------ */
+/* MEDIA QUERIES */
+@media (max-width: 1920px) {
+    .body-padding { padding-inline: 6rem; }
+    .extra-body-padding { padding-inline: 12rem; }
+}
+@media (max-width: 1024px) {
+    .body-padding { padding-inline: 2rem; }
+    .extra-body-padding { padding-inline: 8rem; }
+}
+@media (max-width: 850px) {
+    .header-formatting { flex-direction: column; }
+    .section-block { flex-direction: column; }
+    .text-container, .image-container {
+        max-width: 100%;
+        padding-inline: 2rem;
+    }
+}
+@media (max-width: 544px) {
+    p { font-size: 13pt; }
+    .header-img-formatting { width: 12rem; }
+    .navbar-text { font-size: 0.72rem; }
+    .body-padding, .extra-body-padding {
+        padding-inline: 2rem;
+    }
+    .footer-icons { font-size: 0.8rem; }
+    .footer-text { font-size: 0.7rem; }
+}
+
+/* ------------------------------ */
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Social Footer Icon Hover Effect */
+.footer-icons a i {
+    font-size: 2rem; /* Adjust icon size as needed */
+    color: white;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icons a:hover i {
+    color: #33cc33; /* Bright green glow */
+    text-shadow: 0 0 8px #33cc33, 0 0 12px #33cc33, 0 0 16px #33cc33;
+    transform: translateY(-5px);
+}
