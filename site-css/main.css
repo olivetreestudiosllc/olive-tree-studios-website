@@ -173,6 +173,12 @@ body > section {
     margin-block: 2rem;
     gap: 2rem;
 }
+
+.carousel {
+  width: 70%;
+  margin: auto;
+}
+
 .hero-block {
     text-align: center;
     padding-block: 64px;
