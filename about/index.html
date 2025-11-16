@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="about.css">
 
     <!-- SITEWIDE CSS -->
-    <link rel="stylesheet" href="/site-css/main.css">
+    <link rel="stylesheet" href="../site-css/main.css">
 
     <!-- BOOTSTRAP / FONTS -->
     <link href="/site-css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -72,12 +72,21 @@
     </main>
 
     <!-- MINI DIVIDER -->
-    <section class="about-divider"></section>
+    <div class="about-divider-rail" aria-hidden="true">
+        <div class="rails">
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+        </div>
+    </div>
 
     <!-- SECOND SECTION: WHY OLIVE TREE -->
     <section class="about-section container py-5">
         <div class="text-center mb-4">
-            <h2 class="olive-bold">Why "Olive Tree"?</h2>
+            <h2 class="olive-header">Why "Olive Tree"?</h2>
         </div>
 
         <div class="logo-notes-container text-center">
@@ -86,20 +95,30 @@
 
         <p>Many reasons. Our logo is born not only from the very nature of vertices and edges in 3D, but also of nodes. Nodes being connected.
         Our vision is to serve as the central hub for future productions, with all of our productions representing the nodes that make up the larger structure. Unique productions, under one roof.</p>
-        <p>The inclusion of the olive tree comes from 2 distinct areas. The first area comes from what olive trees represent in the Bible.</p>
-        <p>The olive tree represents peace, life, and prosperity. The commonly known symbol of peace- a dove with… an olive tree branch! The world certainly isn’t gettingmore peaceful, and while we certainly aren’t out to bring world peace, we hope to bring just a bit of an escape for people with our little studio’s productions.</p>
+        <p>The inclusion of the olive tree comes from 2 distinct areas. The first area comes from what olive trees represent in the Bible.
+        The olive tree represents peace, life, and prosperity. The commonly known symbol of peace- a dove with… an olive tree branch! The world certainly isn’t gettingmore peaceful, and while we certainly aren’t out to bring world peace, we hope to bring just a bit of an escape for people with our little studio’s productions.</p>
         <p> second area comes from the importance of olive trees throughout human history. Olive trees have long been a source of prosperity. They produce, shockingly, olives and olive oil. Both used almost globally. Back in old times, olive oil was almost as valuable as gold. Nations with olive trees grew prosperous. So if we want to help creatives with a vision bring their productions to life… why not throw some olives at them?</p>
  </p>
     </section>
     
 
     <!-- MINI DIVIDER -->
-    <section class="about-divider"></section>
+    <div class="about-divider-rail" aria-hidden="true">
+        <div class="rails">
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+            <img src="../site-images/mini-divider.png" alt="" />
+        </div>
+    </div>
+
 
     <!-- THIRD SECTION: CONTRIBUTORS -->
     <section class="about-section container py-5">
         <div class="text-center mb-4">
-            <h2 class="olive-bold">Our Contributors</h2>
+            <h2 class="olive-header">Our Contributors</h2>
             <p>Olive Tree Studios, LLC is made up of many independent commissioned contributors who pour nothing but the most love and dedication into our productions.</p>
             <p>From writers, to storyboarders, to 3D artists, Olive Tree Studios already features a huge gamut of talent. Regardless of someone’s fine contribution, everyone shares one simple thing. A passion to make some darn cool stuff.</p>
         </div>
@@ -114,7 +133,7 @@
 <!-- Top Footer (links) -->
 <footer class="topfooter-base m-0" style="background-color: #1b421b;">
     <div>
-        <h2 class="olive-bold" style="filter: drop-shadow(rgba(20, 120, 6, 0.4) 0px 0px 10px) drop-shadow(rgba(0, 0, 0, 0.4) 0px 2px 4px);">Connect with Us</h2>
+        <h2 class="olive-header" style="filter: drop-shadow(rgba(20, 120, 6, 0.4) 0px 0px 10px) drop-shadow(rgba(0, 0, 0, 0.4) 0px 2px 4px);">Connect with Us</h2>
     </div>
     <div class="footer-icons" style="display: flex; flex-direction: row; gap: 2rem;">
         <!-- YouTube -->
@@ -192,6 +211,15 @@
             nav.classList.toggle('show');
         });
     });
+    document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.about-divider-rail .rails').forEach(rails => {
+        const tile = rails.innerHTML;
+        for (let i = 0; i < 6; i++) {
+        rails.innerHTML += tile;
+        }
+    });
+    });
     </script>
+
 </body>
 </html>
