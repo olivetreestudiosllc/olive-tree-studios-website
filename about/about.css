@@ -10,7 +10,7 @@
 
 /* Section spacing */
 section, main {
-    padding: 4rem 2rem;
+    padding: 1rem;
     background: transparent;
     color: #fff;
 }
@@ -19,7 +19,7 @@ section, main {
 .founder-section {
     display: flex;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .founder-section .text {
@@ -55,14 +55,33 @@ section, main {
     border: none;
 }
 
-/* Divider */
-.about-divider {
-    width: 100%;
-    height: 180px;
-    border-top: 4px solid #2f5e2f;
-    background: url('https://www.motortrend.com/uploads/2022/11/2023-Mini-Cooper-SE-11.jpg') center/cover no-repeat;
-    border-bottom: 4px solid #2f5e2f;
-    margin: 2rem 0;
+.about-divider-rail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 4px solid #2f5e2f;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.about-divider-rail .rails {
+  display: flex;
+  gap: 30px;                 /* spacing between each car */
+  align-items: end;          /* align cars to bottom */
+  /* duplicate length must be >= 2x viewport so loop is seamless */
+  transform: translateX(0);
+  animation: rail-drive 10s linear infinite;
+}
+
+.about-divider-rail .rails img {
+  width: 70px;               /* car width */
+  display: block;
+  margin-bottom: 2px;        /* lift so it sits on road line */
+}
+
+/* animation moves the whole strip left continuously */
+@keyframes rail-drive {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* adjust depending on duplication */
 }
 
 /* Second section: Why Olive Tree */
@@ -228,3 +247,4 @@ section, main {
 .navbar-toggle.active .hamburger-bar:nth-child(3) {
     transform: rotate(-45deg) translateY(-9px);
 }
+

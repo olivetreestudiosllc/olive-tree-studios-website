@@ -7,6 +7,7 @@
 }
 .olive-bold {
     font-family: "olive-bold", sans-serif;
+
 }
 
 @font-face {
@@ -15,6 +16,14 @@
 }
 .olive-regular {
     font-family: "olive-regular", sans-serif;
+    
+}
+
+.olive-header {
+    font-family: "olive-bold", sans-serif;
+    text-align: left;
+    font-size: 3rem;
+
 }
 
 /* ------------------------------ */
@@ -49,7 +58,7 @@ header.header-formatting {
 body > section.body-padding,
 body > section.extra-body-padding,
 body > section {
-    margin-top: calc(80px + 1rem); /* 80px = approximate header height; 1rem = optional extra spacing */
+    margin-top: calc(120px + 1rem); /* 120px = increased header height; 1rem = optional extra spacing */
 }
 
 /* Responsive adjustment for mobile if header grows taller */
@@ -57,14 +66,14 @@ body > section {
     body > section.body-padding,
     body > section.extra-body-padding,
     body > section {
-        margin-top: calc(120px + 1rem); /* increase if header wraps/height grows */
+        margin-top: calc(160px + 1rem); /* increase if header wraps/height grows */
     }
 }
 .header-formatting {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
+    padding: 1.7rem 4rem;
     background-color: rgba(10, 25, 10, 0.85);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
     backdrop-filter: blur(10px);
@@ -83,7 +92,7 @@ body > section {
 /* Header logo size */
 .header-logo-formatting img {
     width: 200px;
-    height: 60px;
+    height: 80px;
     object-fit: contain; 
 }
 
@@ -201,7 +210,7 @@ body > section {
 .a-tag-button {
     font-family: "olive-regular", sans-serif;
     background-color: #fff;
-    color: #2e7c00;
+    color: #1b421b;
     border-radius: 6rem;
     padding: 0.75rem 1.5rem;
     font-size: 1.25rem;
@@ -211,8 +220,8 @@ body > section {
     margin-bottom: 2rem;
 }
 .a-tag-button:hover {
-    background-color: #2f8f2f;
-    color: #fff;
+    background-color:  rgb(153, 179, 153);
+    color: #000000;
     transform: translateY(-5px);
 }
 
