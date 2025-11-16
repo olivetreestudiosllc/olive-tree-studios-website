@@ -3,4 +3,25 @@
 /* use for custom CSS classes on specific page */
 
 /* ------------------------------------------- */
+ 
 
+/* CAROUSEL CARDS CSS */
+.carousel {
+  width: 70%;
+  margin: auto;
+}
+
+.inner-card {
+    background-color: rgba(0, 0, 0, 0.349);
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.show-logo {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
