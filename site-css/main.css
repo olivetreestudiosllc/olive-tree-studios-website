@@ -35,10 +35,8 @@ p {
     font-size: 14pt;
 }
 
-
 /* ------------------------------ */
 /* HEADER */
-/* ===== HEADER FIX FOR PAGE TITLE ===== */
 header.header-formatting {
     position: fixed;   /* keeps header at top */
     top: 0;
@@ -204,7 +202,7 @@ body > section {
 .a-tag-button {
     font-family: "olive-regular", sans-serif;
     background-color: #fff;
-    color: #000;
+    color: #2e7c00;
     border-radius: 6rem;
     padding: 0.75rem 1.5rem;
     font-size: 1.25rem;
@@ -214,7 +212,8 @@ body > section {
     margin-bottom: 2rem;
 }
 .a-tag-button:hover {
-    background-color: rgb(133, 179, 153);
+    background-color: #2f8f2f;
+    color: #fff;
     transform: translateY(-5px);
 }
 
@@ -226,13 +225,6 @@ body > section {
     align-items: center;
     padding: 4rem 0;
     margin-block: 2rem;
-    background: linear-gradient(
-        to top,
-        rgba(5, 20, 5, 1) 0%,
-        rgba(15, 30, 15, 0.85) 60%,
-        rgba(25, 50, 25, 0.7) 100%
-    ), 
-    url("../sitewide-images/footer-bg.png") center/cover;
 }
 .bottomfooter-base {
     display: flex;
@@ -240,11 +232,7 @@ body > section {
     align-items: center;
     padding: 3rem 0;
     color: white;
-    background: linear-gradient(
-        to bottom,
-        rgb(20, 50, 20) 0%,
-        rgb(5, 10, 5) 100%
-    );
+
     font-size: 0.8rem;
 }
 .bottomfooter-base img {
