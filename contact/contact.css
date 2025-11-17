@@ -1,6 +1,163 @@
-/* CONTACT CSS DOC */
+/* ===========================
+   CONTACT US SECTION
+   =========================== */
 
-/* use for custom CSS classes on specific page */
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
 
-/* ------------------------------------------- */
+.contact-banner {
+    width: 100%;
+    height: 400px;
+    background: url('https://www.motortrend.com/uploads/2022/11/2023-Mini-Cooper-SE-11.jpg') center/cover no-repeat;
+    border-bottom: 4px solid #2f5e2f;
+}
 
+.a-tag-button {
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact-main {
+    padding: 3rem 2rem;
+}
+
+.contact-main h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: left;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* --- Form Styles --- */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-top: 0.4rem;
+    padding: 0.8rem 1rem;
+    background: #1f2a1f;
+    border: 1px solid #2f5e2f;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2f8f2f;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* --- Render Placeholder --- */
+
+.contact-render {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-render img {
+    width: 80%;
+    max-width: 260px;
+    opacity: 0.9;
+}
+
+
+/* ===========================
+   PITCH SECTION
+   =========================== */
+
+.pitch-section {
+    padding: 3rem 2rem;
+}
+
+.pitch-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.pitch-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+}
+
+.pitch-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: #ffffff;
+}
+
+.pitch-text ul {
+    padding-left: 1.2rem;
+}
+
+/* Graphic Placeholder */
+.pitch-graphic img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    opacity: 0.9;
+}
+
+
+/* ===========================
+   BREAKPOINTS
+   =========================== */
+
+@media (max-width: 900px) {
+
+    .contact-container,
+    .pitch-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-render,
+    .pitch-graphic {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .contact-main,
+    .pitch-section {
+        padding: 2rem 1.2rem;
+    }
+
+    .contact-main h1,
+    .pitch-section h2 {
+        text-align: center;
+    }
+}
