@@ -16,11 +16,14 @@ section, main {
 }
 
 /* First section layout */
-.founder-section {
+.founder-section .text,
+.founder-section .contributors-grid {
+    flex: 1;
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 3rem;
 }
+
 
 .founder-section .text {
     flex: 1;
@@ -55,62 +58,91 @@ section, main {
     border: none;
 }
 
-.about-divider-rail {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-bottom: 4px solid #2f5e2f;
-  margin: 0.5rem 0 1.5rem;
+/* Two-column layout for the Olive Tree explanation */
+.why-olive-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap; /* allows stacking on small screens */
 }
 
-.about-divider-rail .rails {
-  display: flex;
-  gap: 30px;                 /* spacing between each car */
-  align-items: end;          /* align cars to bottom */
-  /* duplicate length must be >= 2x viewport so loop is seamless */
-  transform: translateX(0);
-  animation: rail-drive 10s linear infinite;
+.why-olive-text {
+    flex: 1 1 450px;
 }
 
-.about-divider-rail .rails img {
-  width: 70px;               /* car width */
-  display: block;
-  margin-bottom: 2px;        /* lift so it sits on road line */
-}
-
-/* animation moves the whole strip left continuously */
-@keyframes rail-drive {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); } /* adjust depending on duplication */
-}
-
-/* Second section: Why Olive Tree */
-.why-section {
+.why-olive-image {
+    flex: 0 1 350px;
     text-align: center;
 }
 
-.why-logo {
+.why-olive-image img {
     width: 100%;
-    max-width: 720px;
-    margin: 0 auto 2rem auto;
-    display: block;
+    max-width: 300px; 
 }
 
-/* Contributors Section */
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+    .why-olive-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-olive-text {
+        text-align: left;
+    }
+}
+
+
+/* ===== Contributors Section Layout ===== */
+.contributors-two-col {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem; /* gap between text and grid */
+}
+
+/* Left Text Column */
+.contributors-text {
+    flex: 0 0 35%;
+}
+
+/* Right Grid Column */
 .contributors-grid {
+    flex: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); 
+    gap: 1rem;
+    justify-items: center;
+}
+
+/* ----- Contributor Cards Styles ----- */
+/* Set a single variable for card size */
+:root {
+    --contributor-card-size: 150px;
 }
 
 .contributor-card {
     background: #1f2a1f;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 12px;
     border: 1px solid #2f5e2f;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: var(--contributor-card-size);
+    height: var(--contributor-card-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contributor-card img {
+    width: calc(var(--contributor-card-size) / 2.5); /* image scales with card size */
+    height: calc(var(--contributor-card-size) / 2.5);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #2f8f2f;
+    margin-bottom: 0.5rem;
 }
 
 .contributor-card:hover {
@@ -118,133 +150,51 @@ section, main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.contributor-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #2f8f2f;
-    margin-bottom: 1rem;
-}
-
 .contributor-card h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: calc(var(--contributor-card-size) / 10); /* scales with card */
     color: #ccffcc;
+    text-align: center;
 }
 
 .contributor-card p {
-    margin: 0.4rem 0 0;
+    margin: 0.25rem 0 0;
     opacity: 0.8;
+    font-size: calc(var(--contributor-card-size) / 10); /* scales with card */
+    text-align: center;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 900px) {
-    .founder-section {
+    .contributors-two-col {
         flex-direction: column;
     }
 
-    .about-banner {
-        height: 240px;
+    .contributors-text {
+        flex: 1 1 auto;
+        margin-bottom: 1.5rem;
     }
-}
-@media (max-width: 600px) {
-    .section-divider {
+
+    .contributors-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* smaller on mobile */
+        gap: 0.8rem;
+    }
+
+    .contributor-card {
+        width: 120px;
         height: 120px;
     }
-}
 
-/* ===== HAMBURGER MENU ===== */
-
-/* Hamburger button (hidden on desktop) */
-.navbar-toggle {
-    display: none; /* visible only on mobile */
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin-left: auto; /* align right */
-    z-index: 1001; /* ensure above nav */
-}
-
-.hamburger-bar {
-    height: 4px;
-    width: 100%;
-    background-color: #33cc33;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    /* Show hamburger button */
-    .navbar-toggle {
-        display: flex;
+    .contributor-card img {
+        width: 50px;
+        height: 50px;
     }
 
-    /* Collapse nav initially */
-    .navbar-block {
-        display: none; /* hidden by default */
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 0.5rem;
-        background-color: rgba(27, 66, 27, 0.95); /* slightly transparent overlay */
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        z-index: 1000;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
+    .contributor-card h3 {
+        font-size: 0.8rem;
     }
 
-    /* When toggled */
-    .navbar-block.show {
-        display: flex;
-        max-height: 500px; /* enough to fit all links */
-        opacity: 1;
-    }
-
-    /* Navbar links spacing */
-    .navbar-block-formatting {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .navbar-text-spacing {
-        margin: 0;
-    }
-
-    .navbar-text {
-        font-size: 1.1rem;
-        color: #ffffff;
-        text-decoration: none;
-        transition: color 0.2s ease;
-    }
-
-    .navbar-text:hover {
-        color: #33cc33;
+    .contributor-card p {
+        font-size: 0.7rem;
     }
 }
-
-/* Hamburger animation when toggled */
-.navbar-toggle.active .hamburger-bar:nth-child(1) {
-    transform: rotate(45deg) translateY(9px);
-}
-
-.navbar-toggle.active .hamburger-bar:nth-child(2) {
-    opacity: 0;
-}
-
-.navbar-toggle.active .hamburger-bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-9px);
-}
-

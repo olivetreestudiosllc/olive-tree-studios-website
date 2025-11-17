@@ -18,6 +18,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+
+    <!-- Mini Divider JS -->
+    <script src="../site-js/divider.js" defer></script>
+
+    <!-- Nav-Bar JS -->
+    <script src="../site-js/navbar.js" defer></script>
 </head>
 
 <body class="bg-dark text-light heebo-regular">
@@ -72,7 +78,7 @@
     </main>
 
     <!-- MINI DIVIDER -->
-    <div class="about-divider-rail" aria-hidden="true">
+    <div class="divider-rail" aria-hidden="true">
         <div class="rails">
             <img src="../site-images/mini-divider.png" alt="" />
             <img src="../site-images/mini-divider.png" alt="" />
@@ -83,27 +89,38 @@
         </div>
     </div>
 
-    <!-- SECOND SECTION: WHY OLIVE TREE -->
-    <section class="about-section container py-5">
-        <div class="text-center mb-4">
-            <h2 class="olive-header">Why "Olive Tree"?</h2>
+<!-- SECOND SECTION: WHY OLIVE TREE -->
+<section class="about-section container py-5">
+    <div class="text-center mb-4">
+        <h2 class="olive-header">Why "Olive Tree"?</h2>
+    </div>
+    <div class="why-olive-layout">
+
+        <div class="why-olive-text">
+            <p>Many reasons. Our logo is born not only from the very nature of vertices and edges in 3D, but also of nodes. 
+            Nodes being connected. Our vision is to serve as the central hub for future productions, with all of our 
+            productions representing the nodes that make up the larger structure. Unique productions, under one roof.</p>
+
+            <p>The inclusion of the olive tree comes from 2 distinct areas. The first area comes from what olive trees 
+            represent in the Bible. The olive tree represents peace, life, and prosperity. The commonly known symbol of 
+            peace — a dove with… an olive tree branch! The world certainly isn’t getting more peaceful, and while we 
+            certainly aren’t out to bring world peace, we hope to bring just a bit of an escape for people with our 
+            little studio’s productions.</p>
+
+            <p>The second area comes from the importance of olive trees throughout human history. Olive trees have long 
+            been a source of prosperity. They produce, shockingly, olives and olive oil — both used almost globally. 
+            Back in old times, olive oil was almost as valuable as gold. Nations with olive trees grew prosperous. So if 
+            we want to help creatives with a vision bring their productions to life… why not throw some olives at them?</p>
         </div>
 
-        <div class="logo-notes-container text-center">
+        <div class="why-olive-image">
             <img src="/site-images/embed-icon.png" alt="Logo breakdown graphic" class="logo-notes">
         </div>
-
-        <p>Many reasons. Our logo is born not only from the very nature of vertices and edges in 3D, but also of nodes. Nodes being connected.
-        Our vision is to serve as the central hub for future productions, with all of our productions representing the nodes that make up the larger structure. Unique productions, under one roof.</p>
-        <p>The inclusion of the olive tree comes from 2 distinct areas. The first area comes from what olive trees represent in the Bible.
-        The olive tree represents peace, life, and prosperity. The commonly known symbol of peace- a dove with… an olive tree branch! The world certainly isn’t gettingmore peaceful, and while we certainly aren’t out to bring world peace, we hope to bring just a bit of an escape for people with our little studio’s productions.</p>
-        <p> second area comes from the importance of olive trees throughout human history. Olive trees have long been a source of prosperity. They produce, shockingly, olives and olive oil. Both used almost globally. Back in old times, olive oil was almost as valuable as gold. Nations with olive trees grew prosperous. So if we want to help creatives with a vision bring their productions to life… why not throw some olives at them?</p>
- </p>
-    </section>
-    
+    </div>
+</section>
 
     <!-- MINI DIVIDER -->
-    <div class="about-divider-rail" aria-hidden="true">
+    <div class="divider-rail" aria-hidden="true">
         <div class="rails">
             <img src="../site-images/mini-divider.png" alt="" />
             <img src="../site-images/mini-divider.png" alt="" />
@@ -114,21 +131,22 @@
         </div>
     </div>
 
-
-    <!-- THIRD SECTION: CONTRIBUTORS -->
-    <section class="about-section container py-5">
-        <div class="text-center mb-4">
-            <h2 class="olive-header">Our Contributors</h2>
-            <p>Olive Tree Studios, LLC is made up of many independent commissioned contributors who pour nothing but the most love and dedication into our productions.</p>
-            <p>From writers, to storyboarders, to 3D artists, Olive Tree Studios already features a huge gamut of talent. Regardless of someone’s fine contribution, everyone shares one simple thing. A passion to make some darn cool stuff.</p>
+<!-- THIRD SECTION: CONTRIBUTORS -->
+<section class="about-section container py-5">
+    <div class="text-center mb-4">
+        <h2 class="olive-header">Our Contributors</h2>
+    </div>
+    <div class="why-olive-layout">
+        <div class="why-olive-text">
+             <p>Olive Tree Studios, LLC is made up of many independent commissioned contributors who pour nothing but the most love and dedication into our productions.</p>
+            <p>From writers, to storyboarders, to 3D artists, Olive Tree Studios already features a huge gamut of talent.</p>
+            <a href="/contributors" class="a-tag-button mt-3">View All Contributors &raquo;</a>
         </div>
-
-        <div id="contributors-grid" class="contributors-grid"></div>
-
-        <div class="text-center mt-4">
-            <a href="/contributors" class="a-tag-button">View All Contributors &raquo;</a>
+                <div class="why-olive-image">
+            <img src="/site-images/embed-icon.png" alt="Logo breakdown graphic" class="logo-notes">
         </div>
-    </section>
+    </div>
+</section>
 
 <!-- Top Footer (links) -->
 <footer class="topfooter-base m-0" style="background-color: #1b421b;">
@@ -180,46 +198,5 @@
         <span>&copy; 2026 Olive Tree Studios, LLC</span><br>
         <p class="footer-text olive-regular">Website designed and built by Olive Tree Studios Contributors. Hosted on GitHub Pages.</p>
     </footer>
-
-    <!-- JSON Contributors Loader -->
-    <script>
-        fetch('/about/contributors.json')
-            .then(res => res.json())
-            .then(list => {
-                const grid = document.getElementById('contributors-grid');
-                list.forEach(person => {
-                    const card = document.createElement('div');
-                    card.className = 'contributor-card';
-                    card.innerHTML = `
-                        <img src="${person.image}" alt="${person.name}">
-                        <h3>${person.name}</h3>
-                        <p>${person.role}</p>
-                    `;
-                    grid.appendChild(card);
-                });
-            });
-    // toggle navbar for mobile script
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggle = document.querySelector('.navbar-toggle');
-        const nav = document.querySelector('.navbar-block');
-
-        // Ensure nav starts collapsed
-        nav.classList.remove('show');
-
-        // Toggle on click
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show');
-        });
-    });
-    document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.about-divider-rail .rails').forEach(rails => {
-        const tile = rails.innerHTML;
-        for (let i = 0; i < 6; i++) {
-        rails.innerHTML += tile;
-        }
-    });
-    });
-    </script>
-
 </body>
 </html>
