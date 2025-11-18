@@ -1,17 +1,62 @@
 [
-{
-"name": "Bluecolty",
-"role": "Studio Founder",
-"image": "/site-images/embed-icon.png"
-},
-{
-"name": "Clay",
-"role": "Site Developer",
-"image": "/site-images/embed-icon.png"
-},
-{
-"name": "Nox",
-"role": "Site Developer",
-"image": "/site-images/embed-icon.png"
-}
+  {
+    "name": "Bluecolty",
+    "role": "Studio Founder",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Clay",
+    "role": "Site Developer",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Nox",
+    "role": "Site Developer",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Astra",
+    "role": "3D Artist",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Echo",
+    "role": "Animator",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Juno",
+    "role": "Storyboard Artist",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Riven",
+    "role": "Lighting & Rendering",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Lyric",
+    "role": "Sound Designer",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Mika",
+    "role": "Concept Artist",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Orin",
+    "role": "Script Writer",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Vera",
+    "role": "Character Designer",
+    "image": "/site-images/embed-icon.png"
+  },
+  {
+    "name": "Zane",
+    "role": "Technical Director",
+    "image": "/site-images/embed-icon.png"
+  }
 ]

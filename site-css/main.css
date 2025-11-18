@@ -330,3 +330,127 @@ body > section {
     text-shadow: 0 0 8px #33cc33, 0 0 12px #33cc33, 0 0 16px #33cc33;
     transform: translateY(-5px);
 }
+
+/* ------------------------------ */
+/* DIVIDER RAIL */
+.divider-rail {
+  position: center;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 4px solid #2f5e2f;
+  margin: 0.5rem auto 1.5rem;
+}
+
+.divider-rail .rails {
+  display: flex;
+  gap: 30px;                 /* spacing between each car */
+  align-items: end;          /* align cars to bottom */
+  /* duplicate length must be >= 2x viewport so loop is seamless */
+  transform: translateX(0);
+  animation: rail-drive 10s linear infinite;
+}
+
+.divider-rail .rails img {
+  width: 70px;               /* car width */
+  display: block;
+  margin-bottom: 2px;        /* lift so it sits on road line */
+}
+
+/* animation moves the whole strip left continuously */
+@keyframes rail-drive {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-10%); } /* adjust depending on duplication */
+}
+
+/* ===== HAMBURGER MENU ===== */
+/* Hamburger button (hidden on desktop) */
+.navbar-toggle {
+    display: none; /* visible only on mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto; /* align right */
+    z-index: 1001; /* ensure above nav */
+}
+
+.hamburger-bar {
+    height: 4px;
+    width: 100%;
+    background-color: #33cc33;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Show hamburger button */
+    .navbar-toggle {
+        display: flex;
+    }
+
+    /* Collapse nav initially */
+    .navbar-block {
+        display: none; /* hidden by default */
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 0.5rem;
+        background-color: rgba(27, 66, 27, 0.95); /* slightly transparent overlay */
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+    }
+
+    /* When toggled */
+    .navbar-block.show {
+        display: flex;
+        max-height: 500px; /* enough to fit all links */
+        opacity: 1;
+    }
+
+    /* Navbar links spacing */
+    .navbar-block-formatting {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navbar-text-spacing {
+        margin: 0;
+    }
+
+    .navbar-text {
+        font-size: 1.1rem;
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .navbar-text:hover {
+        color: #33cc33;
+    }
+}
+
+/* Hamburger animation when toggled */
+.navbar-toggle.active .hamburger-bar:nth-child(1) {
+    transform: rotate(45deg) translateY(9px);
+}
+
+.navbar-toggle.active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active .hamburger-bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px);
+}
