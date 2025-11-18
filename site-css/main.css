@@ -124,7 +124,7 @@ body > section {
 /* HERO SECTION */
 .header-image-container {
     height: calc(8rem + 100vh);
-    background-image: url("https://www.motortrend.com/uploads/2022/11/2023-Mini-Cooper-SE-11.jpg");
+    background-image: url("../site-images/homepage-banner.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
