@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="homepage.css">
 
     <!-- SITEWIDE CSS -->
-    <link rel="stylesheet" href="/site-css/main.css">
+    <link rel="stylesheet" href="site-css/main.css">
 
     <!-- BOOTSTRAP / SLICK / FONTS -->
     <link href="site-css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -31,6 +31,12 @@
     <script src="site-js/popper.min.js"></script>
     <script src="site-js/bootstrap-4.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Mini Divider JS -->
+    <script src="site-js/divider.js" defer></script>
+    
+    <!-- Nav-Bar JS -->
+    <script src="site-js/navbar.js" defer></script>
 
     <!-- EMBED META -->
     <meta content="olivetreestudios.org" property="og:site_name">
@@ -60,10 +66,18 @@
     <header class="header-formatting">
         <div class="header-logo-formatting">
             <a href="https://olivetreestudios.org">
-                <img src="site-images/embed-icon.png" alt="Olive Tree Studios logo"
+                <img src="site-images/studio-logo.png" alt="Olive Tree Studios logo"
                     class="header-img-formatting image-hover">
             </a>
         </div>
+
+    <!-- Hamburger Button for Mobile -->
+    <button class="navbar-toggle" aria-label="Toggle navigation">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+    </button>
+    <!-- Navbar -->
         <nav class="navbar-block">
             <div class="navbar-block-formatting">
                 <div class="navbar-text-spacing"><a class="navbar-text"
@@ -96,42 +110,45 @@
     </section>
 
     <!--CAROUSEL SECTION -->
-    <!--Very rough rn-->
-    <section class="body-padding image-container carousel">
+    <section class="body-padding carousel">
         <div>
             <div class="slider">
                 <div class="card bg-dark text-white ">
                     <img src="site-images/image1.png" class="card-img" alt="olive-avenue">
                     <div class="card-img-overlay">
-                        <img src="site-images/embed-icon.png" class="show-logo">
                         <div class="body-padding inner-card">
-                            <h4 class="hero-text-title olive-bold">Olive Avenue</h4>
-                            <p class="hero-text-subtitle bold">Elit in minim commodo magna eiusmod.</p>
+                            <img src="site-images/OA-logo.png" class="show-logo">
+                            <p class="show-description bold">Set in a suburban Pennsylvania town, Olive Avenue follows teens/young adults Roy Strofferson and Nate
+                    Riley on their journey through everything the late 2010s and early 2020s have to offer. A modern
+                    animated take on the humor found in <i>King of the Hill</i> and <i>Seinfeld</i>.</p></p>
                         <div class="button-container bo">
                             <a href="https://olivetreestudios.org/our-productions/olive-avenue/"
-                                class="a-tag-button">More details &raquo;</a>
-                            <a href="https://youtube.com/@olivetreestudiosllc" class="a-tag-button">Watch now
+                                class="carousel-button">More details &raquo;</a>
+                            <a href="https://youtube.com/@olivetreestudiosllc" class="carousel-button">Watch now
                                 &raquo;</a>
                         </div></div>
 
                     </div>
                 </div>
-<!--This one is a placeholder for the possible 2nd show. If you'll remove it - it won't look like a carousel -->
-<div class="card bg-dark text-white ">
+    <!--This one is a placeholder for the possible 2nd show. If you'll remove it - it won't look like a carousel -->
+                <div class="card bg-dark text-white ">
                     <img src="site-images/image1.png" class="card-img" alt="olive-avenue">
                     <div class="card-img-overlay">
-                        <img src="site-images/embed-icon.png" class="show-logo">
                         <div class="body-padding inner-card">
-                            <h4 class="hero-text-title olive-bold">Olive Avenue</h4>
-                            <p class="hero-text-subtitle bold">Elit in minim commodo magna eiusmod.</p>
+                            <img src="site-images/OA-logo.png" class="show-logo">
+                            <p class="show-description bold">Set in a suburban Pennsylvania town, Olive Avenue follows teens/young adults Roy Strofferson and Nate
+                    Riley on their journey through everything the late 2010s and early 2020s have to offer. A modern
+                    animated take on the humor found in <i>King of the Hill</i> and <i>Seinfeld</i>.</p></p>
                         <div class="button-container bo">
                             <a href="https://olivetreestudios.org/our-productions/olive-avenue/"
-                                class="a-tag-button">More details &raquo;</a>
-                            <a href="https://youtube.com/@olivetreestudiosllc" class="a-tag-button">Watch now
+                                class="carousel-button">More details &raquo;</a>
+                            <a href="https://youtube.com/@olivetreestudiosllc" class="carousel-button">Watch now
                                 &raquo;</a>
                         </div></div>
+
                     </div>
                 </div>
+    <!-- End of placeholder -->
             </div>
         </div>
     </section>
@@ -154,7 +171,17 @@
             </div>
     </section>
 
-    <hr class="hr-class">
+    <!-- MINI DIVIDER -->
+    <div class="divider-rail" aria-hidden="true">
+        <div class="rails">
+            <img src="site-images/mini-divider.png" alt="" />
+            <img src="site-images/mini-divider.png" alt="" />
+            <img src="site-images/mini-divider.png" alt="" />
+            <img src="site-images/mini-divider.png" alt="" />
+            <img src="site-images/mini-divider.png" alt="" />
+            <img src="site-images/mini-divider.png" alt="" />
+        </div>
+    </div>
 
     <section class="body-padding" style="background-color: #1b421b; color: white;">
         <div class="section-block">
@@ -171,25 +198,6 @@
         </div>
     </section>
 
-    <!-- FEATURE SECTION 1 -->
-    <section class="body-padding">
-        <div class="section-block">
-            <div class="image-container">
-                <img src="site-images/section1-icon.png" class="image-hover" alt="Olive Avenue promotional image"
-                    style="max-width: 100%;">
-            </div>
-            <div class="text-container">
-                <h2 class="olive-bold">Our Productions</h2>
-                <p>Set in a suburban Pennsylvania town, Olive Avenue follows teens/young adults Roy Strofferson and Nate
-                    Riley on their journey through everything the late 2010s and early 2020s have to offer. A modern
-                    animated take on the humor found in <i>King of the Hill</i> and <i>Seinfeld</i>.</p>
-                <div class="button-container">
-                    <a href="https://olivetreestudios.org/our-productions/olive-avenue" class="a-tag-button">Watch Olive
-                        Avenue &raquo;</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <hr class="hr-class">
 
@@ -234,9 +242,9 @@
     </section>
 
     <!-- Top Footer (links) -->
-    <footer class="topfooter-base m-0" style="background-color: #1b421b;">
+    <footer class="topfooter-base m-0" style="background-color: #1b421b; background-image: url(site-images/footer-bg.jpg);">
         <div>
-            <h2 class="olive-bold"
+            <h2 class="olive-bold"; 
                 style="filter: drop-shadow(rgba(20, 120, 6, 0.4) 0px 0px 10px) drop-shadow(rgba(0, 0, 0, 0.4) 0px 2px 4px);">
                 Connect with Us</h2>
         </div>
@@ -286,7 +294,7 @@
 
     <!-- FOOTER (INFO) -->
     <footer class="bottomfooter-base">
-        <img src="/site-images/embed-icon.png" alt="Olive Tree Studios logo">
+        <img src="site-images/studio-logo.png" alt="Olive Tree Studios logo">
         <div class="footer-div" style="padding-bottom: 2rem;">
             <a href="https://olivetreestudios.org/about" class="footer-links">About Us</a>
             <a href="https://olivetreestudios.org/links" class="footer-links">Our Links</a>

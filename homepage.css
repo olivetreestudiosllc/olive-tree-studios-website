@@ -3,25 +3,97 @@
 /* use for custom CSS classes on specific page */
 
 /* ------------------------------------------- */
- 
 
 /* CAROUSEL CARDS CSS */
 .carousel {
-  width: 70%;
-  margin: auto;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-button {
+    font-family: "olive-regular", sans-serif;
+    background-color: #fff;
+    color: #1b421b;
+    border-radius: 6rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    display: inline-block;
+    transition: transform 200ms, background-color 200ms;
+    text-decoration: none;
+    margin-bottom: 2rem;
 }
 
 .inner-card {
-    background-color: rgba(0, 0, 0, 0.349);
-    border-radius: 2%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  background-color: rgba(0, 0, 0, 0.349);
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  margin-top: 5rem;
+  width: 60%;
 }
 
 .show-logo {
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 30%;
+  margin-left: 6.2rem;
+}
+
+.show-description {
+  font-size: 1.5rem;
+  font-family: "olive-regular", sans-serif;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1600px) {
+  .show-description {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .inner-card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .inner-card {
+    width: 45%;
+  }
+}
+@media (max-width: 798px) {
+  .inner-card {
+    width: 35%;
+  }
+}
+@media (max-width: 645px) {
+  .inner-card {
+    width: 30%;
+  }
+}
+@media (max-width: 576px) {
+  .show-logo {
+    margin-left: 3rem;
+  }
+  .inner-card {
+    width: 25%;
+  }
+  .show-description {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 430px) {
+  .inner-card {
+    width: 20%;
+  }
+}
+@media (max-width: 390px) {
+
+  .inner-card {
+    width: 18%;
+  }
+  .carousel-button {
+    padding: 0.75rem 1rem;
+}
 }

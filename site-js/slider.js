@@ -4,6 +4,18 @@ jQuery('.slider').slick({
     infinite: true,
     arrows: true,
     autoplay: true,
-    speed: 800,      
-    cssEase: 'linear'
-  });     });
+    speed: 800,
+    autoplaySpeed: 5000,      
+    cssEase: 'linear',
+    adaptiveHeight: true,
+
+    responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+      variableWidth: true,
+      }
+    },
+  ]
+  });   
+  });
