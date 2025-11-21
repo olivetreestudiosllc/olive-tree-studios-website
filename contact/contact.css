@@ -50,7 +50,14 @@
     display: flex;
     flex-direction: column;
     font-size: 0.95rem;
-    color: #ffffff;
+    color: #b4b4b4;
+}
+
+/* Target all inputs and textareas */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #3a3a3a; 
+    opacity: 1; 
 }
 
 .contact-form input,
