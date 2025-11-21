@@ -337,17 +337,23 @@ body > section {
 /* DIVIDER RAIL */
 .divider-rail {
   position: center;
-  width: 100%;
+  max-width: 1300px;
   overflow: hidden;
   border-bottom: 4px solid #2f5e2f;
   margin: 0.5rem auto 1.5rem;
+}
+
+/* Mobile override */
+@media (max-width: 1300px) {
+  .divider-rail {
+    width: 650px; /* or whatever width you prefer visually */
+  }
 }
 
 .divider-rail .rails {
   display: flex;
   gap: 30px;                 /* spacing between each car */
   align-items: end;          /* align cars to bottom */
-  /* duplicate length must be >= 2x viewport so loop is seamless */
   transform: translateX(0);
   animation: rail-drive 10s linear infinite;
 }
@@ -361,7 +367,7 @@ body > section {
 /* animation moves the whole strip left continuously */
 @keyframes rail-drive {
   from { transform: translateX(0); }
-  to   { transform: translateX(-10%); } /* adjust depending on duplication */
+  to   { transform: translateX(-200px); } /* adjust depending on duplication */
 }
 
 /* ===== HAMBURGER MENU ===== */
