@@ -118,7 +118,10 @@
     const messageDiv = document.getElementById('form-message');
 
     form.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Prevent page reload
+        e.preventDefault(); // prevent default form submission
+
+        // Show loading message
+        messageDiv.innerHTML = '<div class="alert alert-info">Sending your message...</div>';
 
         const formData = new FormData(form);
 
@@ -132,19 +135,17 @@
 
             if (result.trim() === 'success') {
                 messageDiv.innerHTML = '<div class="alert alert-success">Message sent! We\'ll get back to you shortly.</div>';
-                form.reset(); // Clear the form
+                form.reset();
             } else {
                 messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again.</div>';
             }
+
         } catch (error) {
             messageDiv.innerHTML = '<div class="alert alert-danger">An unexpected error occurred. Please try again later.</div>';
             console.error('Form submission error:', error);
         }
     });
 </script>
-
-
-    
         <!-- Right: Placeholder render -->
         <div class="contact-render">
             <img src="/site-images/embed-icon.png" alt="Placeholder Render">
