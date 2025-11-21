@@ -118,9 +118,7 @@
     const messageDiv = document.getElementById('form-message');
 
     form.addEventListener('submit', async (e) => {
-        e.preventDefault(); // prevent default form submission
-
-        // Show loading message
+        e.preventDefault();
         messageDiv.innerHTML = '<div class="alert alert-info">Sending your message...</div>';
 
         const formData = new FormData(form);
@@ -133,12 +131,8 @@
 
             const result = await response.text();
 
-            if (result.trim() === 'success') {
-                messageDiv.innerHTML = '<div class="alert alert-success">Message sent! We\'ll get back to you shortly.</div>';
-                form.reset();
-            } else {
-                messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again.</div>';
-            }
+            // Display the raw result for debugging
+            messageDiv.innerHTML = '<div class="alert alert-info"><pre>' + result + '</pre></div>';
 
         } catch (error) {
             messageDiv.innerHTML = '<div class="alert alert-danger">An unexpected error occurred. Please try again later.</div>';
