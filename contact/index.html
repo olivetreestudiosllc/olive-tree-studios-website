@@ -108,12 +108,16 @@
             <textarea name="message" placeholder="Write your message..." required></textarea>
         </label>
 
-        <!-- Optional success message -->
-        <?php if (isset($_GET['success'])): ?>
-        <div class="alert alert-success mt-4">
-            Message sent! We'll get back to you shortly.
-        </div>
-        <?php endif; ?>
+        <!-- send message -->
+    <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
+    <div class="alert alert-success mt-4">
+        Message sent! We'll get back to you shortly.
+    </div>
+    <?php elseif (isset($_GET['success']) && $_GET['success'] == 0): ?>
+    <div class="alert alert-danger mt-4">
+        Something went wrong. Please try again.
+    </div>
+    <?php endif; ?>
 
         <button type="submit" class="a-tag-button">Send Message</button>
     </form>

@@ -1,23 +1,24 @@
 <?php
+// Use PHPMailer namespaces
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Load PHPMailer library
+// Include PHPMailer classes
 require __DIR__ . '/phpmailer/src/PHPMailer.php';
 require __DIR__ . '/phpmailer/src/SMTP.php';
 require __DIR__ . '/phpmailer/src/Exception.php';
 
-// Only process POST requests
+// Form is submitted via POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Sanitize form input
+    // Sanitize user input
     $first   = htmlspecialchars($_POST['first'] ?? '');
     $last    = htmlspecialchars($_POST['last'] ?? '');
     $email   = htmlspecialchars($_POST['email'] ?? '');
     $subject = htmlspecialchars($_POST['subject'] ?? '');
     $message = htmlspecialchars($_POST['message'] ?? '');
 
-    // Build email body
+    // Build the email body
     $body  = "<h2>New Contact Form Submission</h2>";
     $body .= "<p><strong>First Name:</strong> $first</p>";
     $body .= "<p><strong>Last Name:</strong> $last</p>";
@@ -29,35 +30,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mail = new PHPMailer(true);
 
     try {
-        // SMTP settings for cPanel mail
+        // Enable debug output
+        $mail->SMTPDebug = 2;            // 0 = off, 1 = commands, 2 = commands + data
+        $mail->Debugoutput = 'html';     // Output debug in HTML format
+
+        // SMTP configuration
         $mail->isSMTP();
-        $mail->Host       = 'mail.olivetreestudios.org'; // Your cPanel mail server
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'contact@olivetreestudios.org'; // cPanel email
-        $mail->Password   = 'YOUR_EMAIL_PASSWORD';         // cPanel email password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // SSL
-        $mail->Port       = 465;                          
+        $mail->Host       = 'webserver4.pebblehost.com'; // Your cPanel SMTP host
+        $mail->SMTPAuth   = true;                        // Enable authentication
+        $mail->Username   = 'contact@olivetreestudios.org'; // SMTP username
+        $mail->Password   = 'U11RUPTnep4;';          // SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;    // Use SSL
+        $mail->Port       = 465;                           // SMTP port (SSL)
 
-        // Sender and recipient
-        $mail->setFrom('contact@olivetreestudios.org', 'Olive Tree Contact Form');
-        $mail->addAddress('contact@olivetreestudios.org'); // Where you want to receive submissions
-        $mail->addReplyTo($email, "$first $last");          // Replies go to the user
+        // Sender & recipient
+        $mail->setFrom('contact@olivetreestudios.org', 'Olive Tree Contact Form'); // From address
+        $mail->addAddress('contact@olivetreestudios.org');                         // Recipient address
+        $mail->addReplyTo($email, "$first $last");                                 // Reply goes to user
 
-        // Content
-        $mail->isHTML(true);
-        $mail->Subject = "Website Contact: $subject";
+        // Email content
+        $mail->isHTML(true);                     // Email format = HTML
+        $mail->Subject = "Website Contact: $subject"; 
         $mail->Body    = $body;
 
-        // Send email
+        // Send the email
         $mail->send();
 
-        // Redirect with success
+        // Redirect back with success
         header("Location: " . $_SERVER['HTTP_REFERER'] . "?success=1");
         exit;
 
     } catch (Exception $e) {
-        // Optional: enable debug mode temporarily if needed
-        // echo "Mailer Error: {$mail->ErrorInfo}";
+        // Debug info is printed because SMTPDebug=2
         header("Location: " . $_SERVER['HTTP_REFERER'] . "?success=0");
         exit;
     }
