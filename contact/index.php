@@ -81,7 +81,7 @@
     <div class="contact-container">
         
         <!-- Left: Form -->
-    <form class="contact-form" method="POST" action="/contact/mail/send.php">
+    <form class="contact-form" method="POST" action="mail/send.php">
 
         <label>
             First Name
