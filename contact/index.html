@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/site-images/tab-icon.png">
 
+    <!-- PAGE SPECIFIC CSS -->
+    <link rel="stylesheet" href="contact.css">
+    
     <!-- SITEWIDE CSS -->
     <link rel="stylesheet" href="../site-css/main.css">
-
-        <!-- PAGE SPECIFIC CSS -->
-    <link rel="stylesheet" href="contact.css">
 
     <!-- BOOTSTRAP / FONTS -->
     <link href="/site-css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -108,16 +108,8 @@
             <textarea name="message" placeholder="Write your message..." required></textarea>
         </label>
 
-        <!-- send message -->
-    <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
-    <div class="alert alert-success mt-4">
-        Message sent! We'll get back to you shortly.
-    </div>
-    <?php elseif (isset($_GET['success']) && $_GET['success'] == 0): ?>
-    <div class="alert alert-danger mt-4">
-        Something went wrong. Please try again.
-    </div>
-    <?php endif; ?>
+    <!-- Placeholder for success/error messages -->
+    <div id="form-message" class="mt-4"></div>
 
         <button type="submit" class="a-tag-button">Send Message</button>
     </form>
@@ -245,5 +237,40 @@
     <!-- JS / SLICK INIT -->
     <script type="text/javascript" src="../slick/slick.min.js"></script>
     <script type="text/javascript" src="../site-js/slider.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("contact-form");
+        const messageDiv = document.getElementById("form-message");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault(); // prevent normal form submit
+
+            // Create FormData object from form
+            const formData = new FormData(form);
+
+            // Send form data to your PHP backend
+            fetch("https://test.olivetreestudios.org/send.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Here we assume send.php returns "success" or "error"
+                if (data.includes("Message sent successfully") || data.includes("success")) {
+                    messageDiv.innerHTML = '<div class="alert alert-success">Message sent! We\'ll get back to you shortly.</div>';
+                    form.reset(); // clear the form
+                } else {
+                    messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again.</div>';
+                }
+            })
+            .catch(err => {
+                messageDiv.innerHTML = '<div class="alert alert-danger">Error sending message. Please try again later.</div>';
+                console.error(err);
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
