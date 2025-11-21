@@ -114,12 +114,12 @@
 
 <!-- JavaScript to handle form submission -->
 <script>
-    const form = document.getElementById('contact-form');
-    const messageDiv = document.getElementById('form-message');
+    const form = document.querySelector('.contact-form');
+    const messageBox = document.getElementById('form-message');
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        messageDiv.innerHTML = '<div class="alert alert-info">Sending your message...</div>';
+        messageBox.textContent = 'Sending...';
 
         const formData = new FormData(form);
 
@@ -129,14 +129,19 @@
                 body: formData
             });
 
-            const result = await response.text();
+            const result = await response.json();
 
-            // Display the raw result for debugging
-            messageDiv.innerHTML = '<div class="alert alert-info"><pre>' + result + '</pre></div>';
-
-        } catch (error) {
-            messageDiv.innerHTML = '<div class="alert alert-danger">An unexpected error occurred. Please try again later.</div>';
-            console.error('Form submission error:', error);
+            if (result.success) {
+                messageBox.textContent = result.message;
+                messageBox.className = 'alert alert-success mt-4';
+                form.reset();
+            } else {
+                messageBox.textContent = result.message;
+                messageBox.className = 'alert alert-danger mt-4';
+            }
+        } catch (err) {
+            messageBox.textContent = 'Something went wrong. Please try again.';
+            messageBox.className = 'alert alert-danger mt-4';
         }
     });
 </script>
