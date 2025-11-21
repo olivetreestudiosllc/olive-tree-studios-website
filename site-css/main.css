@@ -1,22 +1,11 @@
 /* ------------------------------ */
 /* FONT IMPORTS */
-@font-face {
-    font-family: "olive-bold";
-    font-weight: bold;
-    src: url("../fonts/antique-olive-bold.woff") format('woff');
-}
 .olive-bold {
     font-family: "olive-bold", sans-serif;
-
 }
 
-@font-face {
-    font-family: "olive-regular";
-    src: url("../fonts/antique-olive-regular.woff") format('woff');
-}
 .olive-regular {
     font-family: "olive-regular", sans-serif;
-    
 }
 
 .olive-header {
