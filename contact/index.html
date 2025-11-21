@@ -81,36 +81,44 @@
     <div class="contact-container">
         
         <!-- Left: Form -->
-        <form class="contact-form">
+    <form class="contact-form" method="POST" action="send.php">
 
-            <label>
-                First Name
-                <input type="text" placeholder="Enter your first name">
-            </label>
+        <label>
+            First Name
+            <input type="text" name="first" placeholder="Enter your first name" required>
+        </label>
 
-            <label>
-                Last Name
-                <input type="text" placeholder="Enter your last name">
-            </label>
+        <label>
+            Last Name
+            <input type="text" name="last" placeholder="Enter your last name" required>
+        </label>
 
-            <label>
-                Email Address
-                <input type="email" placeholder="Enter your email">
-            </label>
+        <label>
+            Email Address
+            <input type="email" name="email" placeholder="Enter your email" required>
+        </label>
 
-            <label>
-                Subject
-                <input type="text" placeholder="Enter the subject">
-            </label>
+        <label>
+            Subject
+            <input type="text" name="subject" placeholder="Enter the subject" required>
+        </label>
 
-            <label>
-                Message
-                <textarea placeholder="Write your message..."></textarea>
-            </label>
+        <label>
+            Message
+            <textarea name="message" placeholder="Write your message..." required></textarea>
+        </label>
 
-            <button type="submit" class="a-tag-button">Send Message</button>
-        </form>
+        <!-- Optional success message -->
+        <?php if (isset($_GET['success'])): ?>
+        <div class="alert alert-success mt-4">
+            Message sent! We'll get back to you shortly.
+        </div>
+        <?php endif; ?>
 
+        <button type="submit" class="a-tag-button">Send Message</button>
+    </form>
+
+    
         <!-- Right: Placeholder render -->
         <div class="contact-render">
             <img src="/site-images/embed-icon.png" alt="Placeholder Render">
