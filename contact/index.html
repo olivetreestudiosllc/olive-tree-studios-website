@@ -78,39 +78,71 @@
     <h1>Contact Us</h1>
     <div class="contact-container">
         
-        <!-- Left: Form -->
-    <form class="contact-form" method="POST" action="https://test.olivetreestudios.org/send.php">
+<!-- Left: Contact Form -->
+<form id="contact-form" class="contact-form" method="POST" action="https://test.olivetreestudios.org/send.php">
 
-        <label>
-            First Name
-            <input type="text" name="first" placeholder="Enter your first name" required>
-        </label>
+    <label>
+        First Name
+        <input type="text" name="first" placeholder="Enter your first name" required>
+    </label>
 
-        <label>
-            Last Name
-            <input type="text" name="last" placeholder="Enter your last name" required>
-        </label>
+    <label>
+        Last Name
+        <input type="text" name="last" placeholder="Enter your last name" required>
+    </label>
 
-        <label>
-            Email Address
-            <input type="email" name="email" placeholder="Enter your email" required>
-        </label>
+    <label>
+        Email Address
+        <input type="email" name="email" placeholder="Enter your email" required>
+    </label>
 
-        <label>
-            Subject
-            <input type="text" name="subject" placeholder="Enter the subject" required>
-        </label>
+    <label>
+        Subject
+        <input type="text" name="subject" placeholder="Enter the subject" required>
+    </label>
 
-        <label>
-            Message
-            <textarea name="message" placeholder="Write your message..." required></textarea>
-        </label>
+    <label>
+        Message
+        <textarea name="message" placeholder="Write your message..." required></textarea>
+    </label>
 
-    <!-- Placeholder for success/error messages -->
+    <!-- Placeholder for dynamic success/error messages -->
     <div id="form-message" class="mt-4"></div>
 
-        <button type="submit" class="a-tag-button">Send Message</button>
-    </form>
+    <button type="submit" class="a-tag-button">Send Message</button>
+</form>
+
+<!-- JavaScript to handle form submission -->
+<script>
+    const form = document.getElementById('contact-form');
+    const messageDiv = document.getElementById('form-message');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Prevent page reload
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.text();
+
+            if (result.trim() === 'success') {
+                messageDiv.innerHTML = '<div class="alert alert-success">Message sent! We\'ll get back to you shortly.</div>';
+                form.reset(); // Clear the form
+            } else {
+                messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again.</div>';
+            }
+        } catch (error) {
+            messageDiv.innerHTML = '<div class="alert alert-danger">An unexpected error occurred. Please try again later.</div>';
+            console.error('Form submission error:', error);
+        }
+    });
+</script>
+
 
     
         <!-- Right: Placeholder render -->
@@ -235,40 +267,6 @@
     <!-- JS / SLICK INIT -->
     <script type="text/javascript" src="../slick/slick.min.js"></script>
     <script type="text/javascript" src="../site-js/slider.js"></script>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById("contact-form");
-        const messageDiv = document.getElementById("form-message");
-
-        form.addEventListener("submit", function(e) {
-            e.preventDefault(); // prevent normal form submit
-
-            // Create FormData object from form
-            const formData = new FormData(form);
-
-            // Send form data to your PHP backend
-            fetch("https://test.olivetreestudios.org/send.php", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                // Here we assume send.php returns "success" or "error"
-                if (data.includes("Message sent successfully") || data.includes("success")) {
-                    messageDiv.innerHTML = '<div class="alert alert-success">Message sent! We\'ll get back to you shortly.</div>';
-                    form.reset(); // clear the form
-                } else {
-                    messageDiv.innerHTML = '<div class="alert alert-danger">Something went wrong. Please try again.</div>';
-                }
-            })
-            .catch(err => {
-                messageDiv.innerHTML = '<div class="alert alert-danger">Error sending message. Please try again later.</div>';
-                console.error(err);
-            });
-        });
-    });
-</script>
 
 </body>
 </html>
