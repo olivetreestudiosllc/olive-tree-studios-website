@@ -2,40 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.querySelector('.navbar-toggle');
     const nav = document.querySelector('.navbar-block');
 
-    // Ensure nav starts collapsed
+    // Collapse nav initially
     nav.classList.remove('show');
 
     // Hamburger click
     toggle.addEventListener('click', () => {
         nav.classList.toggle('show');
+        toggle.classList.toggle('active');
     });
 
-    // Mobile dropdown toggles
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    dropdowns.forEach(drop => {
-        const btn = drop.querySelector('.dropdown-btn');
-        const content = drop.querySelector('.dropdown-content');
-
-        btn.addEventListener('click', (e) => {
-            // Only apply on mobile
+    // Mobile dropdown toggle
+    const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+    dropdownBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
-                e.preventDefault();
-                content.classList.toggle('show-mobile');
+                const dropdown = btn.nextElementSibling;
+                dropdown.classList.toggle('show-mobile');
                 btn.classList.toggle('active');
             }
         });
-    });
-
-    // Optional: collapse dropdowns if resizing to desktop
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            document.querySelectorAll('.dropdown-content').forEach(dc => {
-                dc.classList.remove('show-mobile');
-            });
-            document.querySelectorAll('.dropdown-btn').forEach(db => {
-                db.classList.remove('active');
-            });
-        }
     });
 });
