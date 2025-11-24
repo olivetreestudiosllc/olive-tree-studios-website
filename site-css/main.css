@@ -301,6 +301,7 @@ footer .footer-text {
 }
 
 @media (max-width: 768px) {
+    footer span,
     footer .footer-text {
         font-size: 0.8rem;    /* slightly smaller on mobile */
     }
