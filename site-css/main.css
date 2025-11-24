@@ -229,9 +229,24 @@ body > section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 0;
-    margin-block: 2rem;
+    padding: 4rem 0;        /* keep your current padding */
+    margin-block: 2rem;     /* keep your current margin */
+
+    /* Background image settings */
+    background-color: #1b421b;
+    background-image: url(site-images/footer-bg.jpg);
+    background-position: center;   /* center the image */
+    background-repeat: no-repeat;  /* don’t tile */
+    background-size: cover;        /* scale proportionally to cover container */
 }
+
+/* Optional: adjust padding for mobile */
+@media (max-width: 768px) {
+    .topfooter-base {
+        padding: 4rem 1rem;  /* reduce horizontal padding on smaller screens */
+    }
+}
+
 .bottomfooter-base {
     display: flex;
     flex-direction: column;
@@ -244,6 +259,7 @@ body > section {
 .bottomfooter-base img {
     width: 13rem;
     margin-block: 1rem;
+    align-items: center;
 }
 .footer-icons {
     display: flex;
@@ -278,6 +294,7 @@ body > section {
 .footer-text {
     font-size: 0.9rem;
 }
+
 
 /* ------------------------------ */
 /* MEDIA QUERIES */
