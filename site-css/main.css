@@ -290,10 +290,21 @@ body > section {
     color: rgb(133, 179, 153);
     transform: translateY(-2px);
 }
-.footer-text {
-    font-size: 0.9rem;
+footer span,
+footer .footer-text {
+    display: block;
+    text-align: center;       /* center all text */
+    max-width: 100%;          /* ensure it doesn't exceed the viewport */
+    word-wrap: break-word;    /* wrap long lines if needed */
+    margin: 0.25rem 0;        /* optional spacing between lines */
+    padding: 0 1rem;          /* add horizontal padding for mobile */
 }
 
+@media (max-width: 768px) {
+    footer .footer-text {
+        font-size: 0.8rem;    /* slightly smaller on mobile */
+    }
+}
 
 /* ------------------------------ */
 /* MEDIA QUERIES */
