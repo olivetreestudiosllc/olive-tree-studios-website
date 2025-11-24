@@ -431,6 +431,7 @@ footer .footer-text {
     cursor: pointer;
     color: white;
     font-family: "olive-regular", sans-serif;
+    font-size: large;
     transition: transform 200ms, color 200ms;
 }
 .dropdown-btn:hover {
