@@ -234,7 +234,6 @@ body > section {
 
     /* Background image settings */
     background-color: #1b421b;
-    background-image: url(site-images/footer-bg.jpg);
     background-position: center;   /* center the image */
     background-repeat: no-repeat;  /* don’t tile */
     background-size: cover;        /* scale proportionally to cover container */
