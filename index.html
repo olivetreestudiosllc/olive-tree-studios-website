@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/site-images/tab-icon.png">
 
+        <!-- SITEWIDE CSS -->
+    <link rel="stylesheet" href="site-css/main.css">
+    
     <!-- PAGE SPECIFIC CSS -->
     <link rel="stylesheet" href="homepage.css">
-
-    <!-- SITEWIDE CSS -->
-    <link rel="stylesheet" href="site-css/main.css">
 
     <!-- BOOTSTRAP / SLICK / FONTS -->
     <link href="site-css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -80,10 +80,19 @@
     <!-- Navbar -->
         <nav class="navbar-block">
             <div class="navbar-block-formatting">
-                <div class="navbar-text-spacing"><a class="navbar-text"
-                        href="https://olivetreestudios.org/our-productions">Our Shows</a></div>
-                <div class="navbar-text-spacing"><a class="navbar-text"
-                        href="https://olivetreestudios.org/our-productions/olive-avenue">Olive Avenue</a></div>
+
+                <!-- Our Shows -->
+                <div class="dropdown">
+                    <span class="navbar-text dropdown-btn">
+                        Our Shows &#x25BE;
+                    </span>
+
+                    <div class="dropdown-content">
+                        <a href="https://olivetreestudios.org/our-productions/olive-avenue" class="dropdown-item">Olive Avenue</a>
+                    </div>
+                </div>
+
+                <!-- Other nav items -->
                 <div class="navbar-text-spacing"><a class="navbar-text"
                         href="https://olivetreestudios.org/contributors">Our Contributors</a></div>
                 <div class="navbar-text-spacing"><a class="navbar-text"
@@ -308,6 +317,17 @@
     <!-- JS / SLICK INIT -->
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="site-js/slider.js"></script>
+
+    <script>
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const parent = toggle.parentElement;
+            parent.classList.toggle('open');
+        });
+    });
+    </script>
+
 </body>
 
 </html>
