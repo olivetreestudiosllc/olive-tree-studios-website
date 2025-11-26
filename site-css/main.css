@@ -434,10 +434,12 @@ footer .footer-text {
     font-family: "olive-regular", sans-serif;
     font-size: large;
     transition: transform 200ms, color 200ms;
+    text-decoration: none;
 }
 .dropdown-btn:hover {
     color: rgb(71, 149, 90);
     transform: translateY(-1px);
+    text-decoration: none; /* removes underline */
 }
 .dropdown-content {
     position: absolute;
