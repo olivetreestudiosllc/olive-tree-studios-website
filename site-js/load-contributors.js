@@ -1,4 +1,4 @@
-    fetch('/about/contributors.json')
+    fetch('/contributors/contributors.json')
         .then(res => res.json())
         .then(list => {
             const grid = document.getElementById('contributors-grid');
