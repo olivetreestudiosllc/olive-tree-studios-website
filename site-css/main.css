@@ -415,6 +415,7 @@ footer .footer-text {
 .navbar-text:hover {
     color: rgb(71, 149, 90);
     transform: translateY(-1px);
+    text-decoration: none; /* removes underline */
 }
 .navbar-text-spacing {
     position: relative;
