@@ -52,10 +52,9 @@
     <nav class="navbar-block">
         <div class="navbar-block-formatting">
             <div class="navbar-text-spacing dropdown">
-                <a href="/our-productions" class="navbar-text">Our Shows</a>
+                <a href="/our-productions" class="dropdown-btn">Our Shows</a>
                 <div class="dropdown-content">
                     <a href="/our-productions/olive-avenue" class="dropdown-item">Olive Avenue</a>
-                    <a href="/our-productions/show-two" class="dropdown-item">Show Two</a>
                 </div>
             </div>
 
@@ -71,15 +70,33 @@
     <!-- TOP BANNER -->
     <section class="productions-banner"></section>
 
-    <!-- PRODUCTIONS LIST -->
-<section class="productions-section">
-    <div class="page-container">
-        <h1>Our Productions</h1>
-            <div class="productions-grid" id="productions-grid"></div>
-            <!-- JS will insert cards here -->
+        <!-- PRODUCTIONS LIST -->
+    <section class="productions-section">
+        <div class="page-container">
+            <h1>Our Productions</h1>
+
+            <div class="productions-grid">
+
+                <!-- CARD EXAMPLE -->
+                <div class="production-card">
+                    <img src="thumbnails/thumbnail-olive-avenue.png" alt="Olive Avenue">
+                    <h4>Olive Avenue</h4>
+                    <p>Two teens working through the all-too familiar wild ride of life in the late 2010's / early 2020's, too young to be a 90's nostalgia baby and too old to deal with Gen Z nonsense.</p>
+                    <a href="/our-productions/olive-avenue" class="card-btn">Learn More</a>
+                </div>
+
+                <!-- DUPLICATE CARD AS NEEDED -->
+                <div class="production-card">
+                    <img src="thumbnails/thumbnail2.png" alt="Another Production">
+                    <h4>Another Production</h4>
+                    <p>Short description of the production goes here.</p>
+                    <a href="#" class="card-btn">Learn More</a>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
 
  <!-- Top Footer (links) -->
     <footer class="topfooter-base m-0" style="background-color: #1b421b; background-image: url(../site-images/footer-bg.jpg);">
@@ -148,7 +165,6 @@
     <!-- JS / SLICK INIT -->
     <script type="text/javascript" src="../slick/slick.min.js"></script>
     <script type="text/javascript" src="../site-js/slider.js"></script>
-    <script type="text/javascript" src="productions.js"></script>
 
 </body>
 </html>

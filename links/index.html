@@ -39,24 +39,40 @@
 
     </head>
 
-    <body>
-        <header>
-            <div>
-                <!-- div for image logo -->
+<body class="bg-dark text-light heebo-regular">
+    <!-- HEADER -->
+<header class="header-formatting">
+    <div class="header-logo-formatting">
+        <a href="https://olivetreestudios.org">
+            <img src="../site-images/studio-logo.png" alt="Olive Tree Studios logo" class="header-img-formatting">
+        </a>
+    </div>
+
+    <!-- Hamburger Button for Mobile -->
+    <button class="navbar-toggle" aria-label="Toggle navigation">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar-block">
+        <div class="navbar-block-formatting">
+            <div class="navbar-text-spacing dropdown">
+                <a href="/our-productions" class="dropdown-btn">Our Shows</a>
+                <div class="dropdown-content">
+                    <a href="/our-productions/olive-avenue" class="dropdown-item">Olive Avenue</a>
+                </div>
             </div>
 
-            <nav>
-                <!-- dropdown -->
-                <a href="https://olivetreestudios.org/our-productions">Our Shows</a>
-                <a href="https://olivetreestudios.org/our-productions/olive-avenue">Olive Avenue</a>
-
-                <a href="https://olivetreestudios.org/contributors">Our Contributors</a>
-                <a href="https://olivetreestudios.org/opportunities">Opportunities</a>
-                <a href="https://olivetreestudios.org/about">About</a>
-                <a href="https://olivetreestudios.org/contact">Contact</a>
-                <a href="https://olivetreestudios.org/links">Links</a>
-            </nav>
-        </header>
+            <div class="navbar-text-spacing"><a class="navbar-text" href="/contributors">Our Contributors</a></div>
+            <div class="navbar-text-spacing"><a class="navbar-text" href="/opportunities">Opportunities</a></div>
+            <div class="navbar-text-spacing"><a class="navbar-text" href="/about">About</a></div>
+            <div class="navbar-text-spacing"><a class="navbar-text" href="/contact">Contact</a></div>
+            <div class="navbar-text-spacing"><a class="navbar-text" href="/links">Links</a></div>
+        </div>
+    </nav>
+</header>
 
         <!-- hide this with CSS, include more info here. H1 tags are important for browsers to tell what the website is about. include searchable keywords. -->
         <h1>Olive Tree Studios</h1>
@@ -98,29 +114,24 @@
         <a href="https://olive-avenue.fandom.com/wiki/Olive_Avenue_Wiki">
             <svg></svg>
         </a>
+        
+    <!-- FOOTER (INFO) -->
+    <footer class="bottomfooter-base">
+        <img src="../site-images/studio-logo.png" alt="Olive Tree Studios logo">
+        <div class="footer-div" style="padding-bottom: 2rem;">
+            <a href="https://olivetreestudios.org/about" class="footer-links">About Us</a>
+            <a href="https://olivetreestudios.org/links" class="footer-links">Our Links</a>
+            <a href="https://olivetreestudios.org/contact" class="footer-links">Contact Us</a>
+        </div>
+        <span>&copy; 2026 Olive Tree Studios, LLC</span><br>
+        <p class="footer-text olive-regular">Website designed and built by Olive Tree Studios Contributors. Hosted on
+            GitHub Pages.</p>
+    </footer>
 
+    <!-- JS / SLICK INIT -->
+    <script type="text/javascript" src="../slick/slick.min.js"></script>
+    <script type="text/javascript" src="../site-js/slider.js"></script>
+    <script type="text/javascript" src="productions.js"></script>
 
-        <footer>
-            <!-- banner part of footer -->
-            <section>
-                <a href="https://www.youtube.com/@olivetreestudiosllc"></a>
-                <a href="https://bsky.app/profile/olivetreestudios.bsky.social"></a>
-                <a href="https://www.tumblr.com/olivetreestudios"></a>
-                <a href="https://www.reddit.com/r/oliveavenue/"></a>
-                <a href="https://www.patreon.com/c/olivetreestudios"></a>
-            </section>
-
-            <!-- solid part of footer -->
-            <section>
-                <!-- studio logo -->
-                <img href="">
-                <a href="https://olivetreestudios.org/about">About Us</a>
-                <a href="https://olivetreestudios.org/links">Our Links</a>
-                <a href="https://olivetreestudios.org/contact">Contact Us</a>
-
-                <p>© 2026 Olive Tree Studios, LLC</p>
-                <p>Website designed and built by Olive Tree Studios Contributors. Hosted on GitHub Pages.</p>
-            </section>
-        </footer>
-    </body>
+</body>
 </html>
