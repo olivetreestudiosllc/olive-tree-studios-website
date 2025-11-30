@@ -43,7 +43,7 @@
     display: block;
     margin: 0 auto;      /* centers the image */
     border-radius: 0.5rem;
-    margin-top: 0.9rem;
+    margin-top: 1rem;
 }
 
 .production-card h4 {

@@ -1,0 +1,68 @@
+[
+  {
+    "key": "producer",
+    "title": "Producer",
+    "brief": "Lead new projects and coordinate teams.",
+    "description": "As a Producer, you'll oversee the creative direction of our productions and manage the project from start to finish.",
+    "bullets": [
+      "Oversee creative direction",
+      "Coordinate schedules",
+      "Manage department leads"
+    ]
+  },
+  {
+    "key": "writer",
+    "title": "Writer",
+    "brief": "Craft compelling stories and scripts.",
+    "description": "Writers develop the scripts and storylines for our productions, working closely with the creative team.",
+    "bullets": [
+      "Create scripts for projects",
+      "Collaborate with other creatives",
+      "Adapt content for multiple media formats"
+    ]
+  },
+  {
+    "key": "animator",
+    "title": "Animator",
+    "brief": "Bring characters to life through motion.",
+    "description": "Animators work on character movement and sequences, ensuring fluid, engaging visuals.",
+    "bullets": [
+      "Create keyframe animations",
+      "Collaborate with directors and modelers",
+      "Refine motion for scenes"
+    ]
+  },
+    {
+    "key": "animator",
+    "title": "Animator",
+    "brief": "Bring characters to life through motion.",
+    "description": "Animators work on character movement and sequences, ensuring fluid, engaging visuals.",
+    "bullets": [
+      "Create keyframe animations",
+      "Collaborate with directors and modelers",
+      "Refine motion for scenes"
+    ]
+  },
+    {
+    "key": "animator",
+    "title": "Animator",
+    "brief": "Bring characters to life through motion.",
+    "description": "Animators work on character movement and sequences, ensuring fluid, engaging visuals.",
+    "bullets": [
+      "Create keyframe animations",
+      "Collaborate with directors and modelers",
+      "Refine motion for scenes"
+    ]
+  },
+    {
+    "key": "animator",
+    "title": "Animator",
+    "brief": "Bring characters to life through motion.",
+    "description": "Animators work on character movement and sequences, ensuring fluid, engaging visuals.",
+    "bullets": [
+      "Create keyframe animations",
+      "Collaborate with directors and modelers",
+      "Refine motion for scenes"
+    ]
+  }
+]
