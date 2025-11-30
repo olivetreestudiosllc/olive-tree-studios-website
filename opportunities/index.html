@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="site-images/tab-icon.png">
 
+        <!-- SITEWIDE CSS -->
+    <link rel="stylesheet" href="/site-css/main.css">
+    
     <!-- PAGE SPECIFIC CSS -->
     <link rel="stylesheet" href="opportunities.css">
-
-    <!-- SITEWIDE CSS -->
-    <link rel="stylesheet" href="/site-css/main.css">
 
     <!-- BOOTSTRAP / FONTS / ICONS -->
     <link href="site-css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -30,6 +30,7 @@
         <!-- Divider + Navbar JS -->
     <script src="../site-js/divider.js" defer></script>
     <script src="../site-js/navbar.js" defer></script>
+
 
     <!-- EMBED META -->
     <meta content="olivetreestudios.org" property="og:site_name">
@@ -87,10 +88,12 @@
     </nav>
 </header>
 
+<section class="opportunities-banner"></section>
+
     <!-- INTRODUCTION -->
     <section class="page-container">
-        <div class="hero-block">
-            <h1 class="olive-bold">Opportunities - Independent Contributors</h1>
+        <div>
+            <h1>Independent Contributors</h1>
             <p>
                 Even in its fledgling state, Olive Tree Studios is already made up of a global canvas collective. Artists worldwide, contributing to something greater than themselves. We aren't about to limit ourselves to talent just within the United States.
                 <br><br>
@@ -103,25 +106,24 @@
         </div>
     </section>
 
-    <!-- NEEDS SECTION -->
-    <section class="page-container">
-        <h2 class="olive-bold">Needs</h2>
-        <ul class="contributor-needs">
-            <li>Concept Artists (2D/3D)</li>
-            <li>Storyboard Artists (2D/3D)</li>
-            <li>3D Asset/Prop Artists</li>
-            <li>3D Character Artists</li>
-            <li>3D Animators</li>
-            <li>Texturing and Surface Artists</li>
-            <li>Environment Artists</li>
-            <li>Riggers</li>
-            <li>Lighting Artists</li>
-            <li>Render Technician Artists</li>
-            <li>Voice Actors</li>
-            <li>Sound Designers</li>
-        </ul>
-    </section>
+<section class="page-container opportunities-section">
+    <div id="roles-grid" class="roles-grid"></div>
 
+        </div>
+        <div class="role-description">
+            <h3 id="role-title"></h3>
+            <p id="role-full-description"></p>
+                <div id="role-detail" class="role-detail">
+        <div class="role-bullets">
+            <ul id="role-bullets-list"></ul>
+            <a href="/contact" class="a-tag-button">Apply Now</a>
+        </div>  
+    </div>
+</section>
+
+
+    <!-- Script -->
+    <script src="/opportunities/opportunities.js"></script>
 
  <!-- Top Footer (links) -->
     <footer class="topfooter-base m-0" style="background-color: #1b421b; background-image: url(../site-images/footer-bg.jpg);">
@@ -190,7 +192,6 @@
     <!-- JS / SLICK INIT -->
     <script type="text/javascript" src="../slick/slick.min.js"></script>
     <script type="text/javascript" src="../site-js/slider.js"></script>
-    <script type="text/javascript" src="productions.js"></script>
 
 </body>
 </html>
