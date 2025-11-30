@@ -6,16 +6,20 @@
     border-bottom: 4px solid #2f5e2f;
 }
 
+.productions-section {
+    padding: 0 0 2rem 0;
+}
+
 .productions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, minmax(18rem, 1fr)); /* 3 columns, min width 18rem */
     gap: 2rem;
     justify-content: center;
 }
 
 .production-card {
     background-color: #223322;
-    border-radius: 12px;
+    border-radius: .7rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -24,10 +28,22 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.production-card.unused {
+    opacity: 0.35;
+    filter: grayscale(100%);
+    pointer-events: none; /* can't click */
+    transform: none !important; /* no hover movement */
+    box-shadow: none !important;
+}
+
 .production-card img {
-    width: 100%;
+    width: 90%;
     aspect-ratio: 2 / 3;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;      /* centers the image */
+    border-radius: 0.5rem;
+    margin-top: 0.9rem;
 }
 
 .production-card h4 {
