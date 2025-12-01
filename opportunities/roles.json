@@ -1,68 +1,163 @@
-[
-  {
-    "key": "producer",
-    "title": "Producer",
-    "brief": "Lead new projects and coordinate teams.",
-    "description": "As a Producer, you'll oversee the creative direction of our productions and manage the project from start to finish.",
-    "bullets": [
-      "Oversee creative direction",
-      "Coordinate schedules",
-      "Manage department leads"
-    ]
-  },
-  {
-    "key": "writer",
-    "title": "Writer",
-    "brief": "Craft compelling stories and scripts.",
-    "description": "Writers develop the scripts and storylines for our productions, working closely with the creative team.",
-    "bullets": [
-      "Create scripts for projects",
-      "Collaborate with other creatives",
-      "Adapt content for multiple media formats"
-    ]
-  },
-  {
-    "key": "animator",
-    "title": "Animator",
-    "brief": "Bring characters to life through motion.",
-    "description": "Animators work on character movement and sequences, ensuring fluid, engaging visuals.",
-    "bullets": [
-      "Create keyframe animations",
-      "Collaborate with directors and modelers",
-      "Refine motion for scenes"
-    ]
-  },
+{
+  "categories": [
     {
-    "key": "animator",
-    "title": "Animator",
-    "brief": "Bring characters to life through motion.",
-    "description": "Animators work on character movement and sequences, ensuring fluid, engaging visuals.",
-    "bullets": [
-      "Create keyframe animations",
-      "Collaborate with directors and modelers",
-      "Refine motion for scenes"
-    ]
-  },
+      "name": "Pre-Production",
+      "roles": [
+        {
+          "id": "storyboard-artist",
+          "title": "Storyboard Artist (2D/3D)",
+          "brief": "Visualize sequences and camera blocking.",
+          "description": "Storyboard artists create visual breakdowns for scenes, cameras, and timing to guide the production pipeline.",
+          "bullets": [
+            "Produce storyboards and animatics",
+            "Work with directors to refine shots",
+            "Deliver clear, production-ready panels"
+          ],
+          "applyLink": "/contact"
+        },
+        {
+          "id": "concept-artist",
+          "title": "Concept Artist (2D/3D)",
+          "brief": "Design characters, props and environments.",
+          "description": "Concept artists develop the look and feel for characters, props, and worlds used across the production.",
+          "bullets": [
+            "Create character and environment concepts",
+            "Produce style frames and color keys",
+            "Collaborate with art direction for consistency"
+          ],
+          "applyLink": "/contact"
+        },
+        {
+          "id": "voice-actor",
+          "title": "Voice Actor",
+          "brief": "Bring characters to life through performance.",
+          "description": "Voice actors provide character voices and emotional performance for the cast, often collaborating on direction and tone.",
+          "bullets": [
+            "Record high-quality vocal takes",
+            "Work with directors for character tone",
+            "Deliver multiple takes and variations"
+          ],
+          "applyLink": "/contact"
+        }
+      ]
+    },
     {
-    "key": "animator",
-    "title": "Animator",
-    "brief": "Bring characters to life through motion.",
-    "description": "Animators work on character movement and sequences, ensuring fluid, engaging visuals.",
-    "bullets": [
-      "Create keyframe animations",
-      "Collaborate with directors and modelers",
-      "Refine motion for scenes"
-    ]
-  },
+      "name": "Production",
+      "roles": [
+        {
+          "id": "asset-prop-artist",
+          "title": "3D Asset / Prop Artist",
+          "brief": "Model props and small set pieces.",
+          "description": "Create production-ready props and small assets ensuring correct topology and UVs for texturing and animation.",
+          "bullets": [
+            "Model production assets",
+            "Provide clean topology and UVs",
+            "Work with texture and lighting teams"
+          ],
+          "applyLink": "/contact"
+        },
+        {
+          "id": "char-artist",
+          "title": "3D Character Artist",
+          "brief": "Model and sculpt characters.",
+          "description": "Character artists sculpt and model protagonists and supporting cast with production-ready topology and detail maps.",
+          "bullets": [
+            "High/low poly character modelling",
+            "Provide sculpt details and maps",
+            "Collaborate with riggers for deformation"
+          ],
+          "applyLink": "/contact"
+        },
+        {
+          "id": "animator",
+          "title": "3D Animator",
+          "brief": "Animate characters and creatures.",
+          "description": "Animators create polished motion for characters and creatures, refining timing, weight, and acting to match direction.",
+          "bullets": [
+            "Keyframe character animation",
+            "Polish motion and acting",
+            "Collaborate with directors and riggers"
+          ],
+          "applyLink": "/contact"
+        },
+        {
+          "id": "texturing",
+          "title": "Texturing & Surface Artist",
+          "brief": "Paint PBR textures and materials.",
+          "description": "Texture artists create surface maps and material setups to achieve the final look under production lighting.",
+          "bullets": [
+            "Produce PBR maps and trim sheets",
+            "Create material setups for renderers",
+            "Work with lookdev and lighting teams"
+          ],
+          "applyLink": "/contact"
+        },
+        {
+          "id": "environment-artist",
+          "title": "Environment Artist",
+          "brief": "Build immersive environments.",
+          "description": "Environment artists craft believable worlds and environments, from blockout to final layout and detailing.",
+          "bullets": [
+            "Layout and detail environments",
+            "Optimize scenes for production",
+            "Collaborate with lighting and effects"
+          ],
+          "applyLink": "/contact"
+        },
+        {
+          "id": "rigger",
+          "title": "Rigger",
+          "brief": "Create deformation systems for characters.",
+          "description": "Riggers build skeletons and control rigs enabling animators to pose and animate characters reliably.",
+          "bullets": [
+            "Build character rigs and controls",
+            "Skin and weight characters",
+            "Provide animator-friendly tools"
+          ],
+          "applyLink": "/contact"
+        },
+        {
+          "id": "lighting",
+          "title": "Lighting Artist",
+          "brief": "Light scenes for mood and clarity.",
+          "description": "Lighting artists create the final lighting for shots, balancing mood, clarity, and render performance.",
+          "bullets": [
+            "Establish mood and story lighting",
+            "Optimize rendering and shot budgets",
+            "Work closely with compositors"
+          ],
+          "applyLink": "/contact"
+        }
+      ]
+    },
     {
-    "key": "animator",
-    "title": "Animator",
-    "brief": "Bring characters to life through motion.",
-    "description": "Animators work on character movement and sequences, ensuring fluid, engaging visuals.",
-    "bullets": [
-      "Create keyframe animations",
-      "Collaborate with directors and modelers",
-      "Refine motion for scenes"
-    ]
-  }
-]
+      "name": "Post-Production",
+      "roles": [
+        {
+          "id": "render-tech",
+          "title": "Render Technician Artist",
+          "brief": "Manage renders and compositing handoffs.",
+          "description": "Render techs handle farm submissions, troubleshooting, and deliverable pipelines to ensure frames render consistently.",
+          "bullets": [
+            "Manage render submissions and settings",
+            "Troubleshoot render errors",
+            "Ensure deliverables match compositing needs"
+          ],
+          "applyLink": "/contact"
+        },
+        {
+          "id": "sound-designer",
+          "title": "Sound Designer",
+          "brief": "Design the soundscape and effects.",
+          "description": "Sound designers craft effects, ambiences, and mixes that enhance the emotional storytelling of each shot.",
+          "bullets": [
+            "Create sound effects and ambiences",
+            "Mix and sync audio to picture",
+            "Collaborate with music and editorial"
+          ],
+          "applyLink": "/contact"
+        }
+      ]
+    }
+  ]
+}

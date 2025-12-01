@@ -5,10 +5,10 @@
     <title>Olive Tree Studios - Opportunities</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="site-images/tab-icon.png">
+    <link rel="icon" type="image/png" href="../site-images/tab-icon.png">
 
         <!-- SITEWIDE CSS -->
-    <link rel="stylesheet" href="/site-css/main.css">
+    <link rel="stylesheet" href="../site-css/main.css">
     
     <!-- PAGE SPECIFIC CSS -->
     <link rel="stylesheet" href="opportunities.css">
@@ -106,24 +106,33 @@
         </div>
     </section>
 
-<section class="page-container opportunities-section">
-    <div id="roles-grid" class="roles-grid"></div>
-
+    <!-- Opportunities Section -->
+  <div class="page-container">
+    <section class="opportunities-section" id="opportunitiesSection">
+      <h2 class="opps-title">Open Opportunities</h2>
+      
+      <div class="opps-inner">
+        <!-- Grid Wrap -->
+        <div class="grid-wrap">
+          <div class="roles-grid-outer">
+            <div class="roles-grid" id="rolesGrid">
+              <!-- Roles will be loaded here by JavaScript -->
+            </div>
+          </div>
         </div>
-        <div class="role-description">
-            <h3 id="role-title"></h3>
-            <p id="role-full-description"></p>
-                <div id="role-detail" class="role-detail">
-        <div class="role-bullets">
-            <ul id="role-bullets-list"></ul>
-            <a href="/contact" class="a-tag-button">Apply Now</a>
-        </div>  
-    </div>
-</section>
 
+        <!-- Detail Panel -->
+        <div class="role-detail" id="roleDetail">
+          <button class="detail-close" id="closeDetail">×</button>
+          <div class="role-detail-inner" id="roleDetailInner">
+            <!-- Detail content will be loaded here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <!-- Script -->
-    <script src="/opportunities/opportunities.js"></script>
+  <script src="opportunities.js"></script>
 
  <!-- Top Footer (links) -->
     <footer class="topfooter-base m-0" style="background-color: #1b421b; background-image: url(../site-images/footer-bg.jpg);">
