@@ -1,6 +1,13 @@
+.opportunities-banner {
+    width: 100%;
+    height: 21.875rem;
+    background: url('https://www.motortrend.com/uploads/2022/11/2023-Mini-Cooper-SE-11.jpg') center/cover no-repeat;
+    border-bottom: 0.25rem solid #2f5e2f;
+}
+
 /* Page Container - constrains width like rest of site */
 .page-container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   width: 100%;
   padding: 2rem;
@@ -52,7 +59,7 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  max-width: 900px;
+  max-width: 56.25rem;
 }
 
 /* Category section */
@@ -68,46 +75,52 @@
   color: #ffffff;
   font-size: 1.1rem;
   text-align: left;
-  padding-left: .25rem;
+  padding-left: 0.25rem;
   text-transform: uppercase;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   font-weight: 700;
 }
 
 /* Category cards container */
 .category-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
   gap: 1.25rem;
+}
+
+/* When detail is open, show only 2 columns */
+.opportunities-section.show-detail .category-cards {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 /* Individual card */
 .role-card {
   background-color: #2f5e2f;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
   padding: 1.25rem;
   cursor: pointer;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  min-height: 120px;
+  min-height: 7.5rem;
 }
 
 /* Hover */
 .role-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1.375rem rgba(0,0,0,0.45);
 }
 
 /* Selected / highlighted */
 .role-card.selected {
   border-color: #7fe37f;
-  box-shadow: 0 10px 30px rgba(47,110,47,0.35);
-  transform: translateY(-4px);
+  box-shadow: 0 0.625rem 1.875rem rgba(47,110,47,0.35);
+  transform: translateY(-0.25rem);
 }
 
 /* Title + brief */
@@ -129,12 +142,13 @@
 /* Role-detail panel (right) */
 .role-detail {
   width: 0%;
-  max-width: 500px;
+  max-width: 40.625rem;
+  min-height: 71.875rem;
   background: rgba(15,30,15,0.95);
-  border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.75rem 1.875rem rgba(0,0,0,0.6);
   overflow: hidden;
-  transform: translateX(20px);
+  transform: translateX(1.25rem);
   transition: width 420ms cubic-bezier(.22,.9,.32,1), transform 420ms ease, opacity 280ms ease;
   opacity: 0;
   position: absolute;
@@ -146,11 +160,11 @@
 
 /* When detail shown - grid moves to left, detail appears on right */
 .opportunities-section.show-detail .grid-wrap {
-  width: calc(100% - 520px);
+  width: calc(100% - 41.875rem);
 }
 
 .opportunities-section.show-detail .role-detail {
-  width: 500px;
+  width: 40.625rem;
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
@@ -163,10 +177,6 @@
 
 .opportunities-section.show-detail .roles-grid {
   max-width: 100%;
-}
-
-.opportunities-section.show-detail .category-cards {
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
 /* Detail inner */
@@ -209,30 +219,11 @@
   line-height: 1.5;
 }
 
-/* Apply button matches site (white bg, green text) */
-.role-detail .a-tag-button {
-  background-color: #fff;
-  color: #1b421b;
-  border-radius: 6rem;
-  padding: 0.75rem 1.5rem;
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 150ms ease, box-shadow 150ms ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.role-detail .a-tag-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
 /* Close button top-right of detail */
 .detail-close {
   position: absolute;
-  right: 12px;
-  top: 12px;
+  right: 0.75rem;
+  top: 0.75rem;
   background: rgba(255,255,255,0.1);
   border: none;
   color: #cfe6cf;
@@ -251,7 +242,7 @@
 }
 
 /* Mobile: collapse behavior */
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .page-container {
     padding: 1rem;
   }
@@ -286,7 +277,7 @@
     position: relative;
     width: 100% !important;
     max-width: none !important;
-    transform: translateY(12px);
+    transform: translateY(0.75rem);
     opacity: 0;
     margin-top: 0;
   }

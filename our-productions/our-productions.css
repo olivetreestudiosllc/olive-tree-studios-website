@@ -1,7 +1,7 @@
 /* Top banner placeholder */
 .productions-banner {
     width: 100%;
-    height: 250px;
+    height: 21.875rem;
     background: url(../site-images/productions-banner.png) center/cover no-repeat;
     border-bottom: 4px solid #2f5e2f;
 }
