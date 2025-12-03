@@ -304,6 +304,7 @@ footer .footer-text {
     word-wrap: break-word;    /* wrap long lines if needed */
     margin: 0.25rem 0;        /* optional spacing between lines */
     padding: 0 1rem;          /* add horizontal padding for mobile */
+    font-size: 12px;          /* font size */
 }
 
 @media (max-width: 768px) {
