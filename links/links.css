@@ -1,6 +1,153 @@
-/* LINKS CSS DOC */
+/* Links Banner - 1/3rd height (approximately 400px) */
+.links-banner {
+    width: 100%;
+    height: 21.875rem;
+    background: url('https://www.motortrend.com/uploads/2022/11/2023-Mini-Cooper-SE-11.jpg') center/cover no-repeat;
+    border-bottom: 0.25rem solid #2f5e2f;
+}
 
-/* use for custom CSS classes on specific page */
+/* Section styling */
+.links-section {
+    padding: 3rem 0;
+}
 
-/* ------------------------------------------- */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    filter: drop-shadow(rgba(6, 120, 60, 0.4) 0px 0px 10px) 
+            drop-shadow(rgba(0, 0, 0, 0.4) 0px 2px 4px);
+}
 
+/* Links Grid */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 15rem)); /* fixed width for all cards */
+    justify-content: center; /* center cards if fewer than row capacity */
+    gap: 2rem;
+}
+
+/* Individual Link Card */
+.link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    background: #223322;
+    border: 0.125rem solid rgba(127, 227, 127, 0.2);
+    border-radius: 1.25rem;
+    text-decoration: none;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+
+
+.link-card:hover {
+    background: rgba(47, 94, 47, 0.5);
+    border-color: rgba(127, 227, 127, 0.5);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3),
+                0 0 1.5rem rgba(127, 227, 127, 0.2);
+}
+
+/* Icon wrapper */
+.icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    filter: drop-shadow(0 0.25rem 0.5rem rgba(0, 0, 0, 0.3));
+    transition: all 300ms ease;
+}
+
+.link-card:hover .icon-wrapper svg {
+    color: rgb(153, 179, 153);
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 0.75rem rgba(127, 227, 127, 0.5));
+}
+
+/* Link label text */
+.link-label {
+    margin: 0;
+    font-size: 1.125rem;
+    color: #fff;
+    text-align: center;
+    transition: color 300ms ease;
+}
+
+.link-card:hover .link-label {
+    color: rgb(153, 179, 153);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .links-banner {
+        height: 20rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .link-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .icon-wrapper {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .link-label {
+        font-size: 1rem;
+    }
+
+    main.page-container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .links-section {
+        padding: 2rem 0;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .link-card {
+        padding: 1.25rem 0.75rem;
+        gap: 0.75rem;
+    }
+
+    .icon-wrapper {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .link-label {
+        font-size: 0.9rem;
+    }
+}
