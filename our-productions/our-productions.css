@@ -26,6 +26,7 @@
     text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 0.125rem solid rgba(127, 227, 127, 0.2);
 }
 
 .production-card.unused {
