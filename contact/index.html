@@ -78,6 +78,8 @@
      <div class="page-container">
     <h1>Contact Us</h1>
     <div class="contact-container">
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
         
 <!-- Left: Contact Form -->
 <form id="contact-form" class="contact-form" method="POST" action="https://contactbackend.olivetreestudios.org/send.php">
@@ -107,10 +109,7 @@
         <textarea name="message" placeholder="Write your message..." required></textarea>
     </label>
 
-        <div style="position:absolute; left:-9999px;">
-        <label>Website</label>
-        <input type="text" name="company_website" tabindex="-1" autocomplete="off">
-        </div>
+    <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY_HERE"></div>
  
     <!-- Placeholder for dynamic success/error messages -->
     <div id="form-message" class="mt-4"></div>
